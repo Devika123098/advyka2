@@ -1,13 +1,14 @@
+@import "tailwindcss";
 .homeContainer {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     color: white;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .videoContainer {
@@ -30,4 +31,17 @@ video {
     position: relative;
     z-index: 2;
 }
-
+.logo{
+    width: 50vh;
+    margin-left: 32vh;
+}
+.title{
+    margin: 77px;
+    margin-top: 23vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.titleName{
+    font-size: 30px;
+}
