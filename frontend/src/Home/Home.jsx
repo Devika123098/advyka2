@@ -40,9 +40,6 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className={styles.scrollSection}>
-                <h2>Scroll Down</h2>
-            </div>
         </>
     );
 };

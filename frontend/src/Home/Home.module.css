@@ -31,10 +31,3 @@ video {
     z-index: 2;
 }
 
-.scrollSection {
-    height: 300vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
