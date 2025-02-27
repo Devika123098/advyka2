@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@media (max-width: 800px) {
+    .card-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
