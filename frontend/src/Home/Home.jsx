@@ -40,10 +40,21 @@ const Home = () => {
                 <div className={styles.content}>
                     <div className={styles.title}>
                         <div>
-                          <h2 className={styles.titleName}>Advyka</h2>
-                          <p className={styles.titleDesc}>Unleash the Eminence of <br />Esctacy</p>
+                          <h2 className={styles.titleName}>Advyka'25</h2>
+                          <p className={styles.titleDesc}>Unleash the Eminence of Esctacy <br />On March 21 and 22</p>
                         </div>
                         <img src={logo} alt="logo" className={styles.logo} />
+                    </div>
+                    
+                    <div className={styles.countdownBox}>
+                        <div className={styles.countdownItem}>
+                            <div className={styles.countdownNumber}>21</div>
+                            <div className={styles.countdownLabel}>Days</div>
+                        </div>
+                        <div className={styles.countdownItem}>
+                            <div className={styles.countdownNumber}>12</div>
+                            <div className={styles.countdownLabel}>Hours</div>
+                        </div>
                     </div>
                 </div>
             </div>
