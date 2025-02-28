@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
-import logo from "../assets/advykabg.webp"
+import logo from "../assets/advykabg.webp";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -8,7 +9,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}><img src={logo} alt="" /></div>
       <ul className={styles.navLinks}>
-        <li>About</li>
+        <li><Link to="/about">About</Link></li>
         <li>Proshows</li>
         <li>Events</li>
         <li>Contact</li>
@@ -18,7 +19,7 @@ const Navbar = () => {
       </div>
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          <a href="#">About</a>
+          <a href="#"><Link to="/about">About</Link></a>
           <a href="#">Proshows</a>
           <a href="#">Events</a>
           <a href="#">Contact</a>
