@@ -10,7 +10,7 @@ function About() {
             <div className="-z-10 absolute w-full h-full top-0 left-0 overflow-hidden ">
             </div>
             <div className="flex flex-col items-center">
-            <h2 className="text-white text-4xl my-20">About Advyka</h2>
+            <h2 className="text-white text-4xl my-20 font-bold">About Advyka</h2>
             <div className="flex gap-20 justify-between card-container mb-8">
                 <Cards icon = {rocketIcon} title = "Innovation Hub" text = "Experience cutting-edge technology and innovative projects from talented students."/>
                 <Cards  icon={trophyIcon} title = "Competitions" text = "Participate in exciting competitions and win amazing prizes worth ₹10,00,000+."/>

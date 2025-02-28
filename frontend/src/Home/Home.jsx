@@ -30,9 +30,10 @@ const Home = () => {
       scrollTrigger: {
         trigger: video,
         start: "top top",
-        end: "bottom top",
+        end: "+=3000px",//or bottom top if neded
         scrub: 1,
         pin: true,
+        pinSpacing: false,
       },
     });
 
@@ -73,8 +74,9 @@ const Home = () => {
           <div className={styles.title}>
             <div>
               <h2 className={styles.titleName}>Advyka'25</h2>
-              <p className={styles.titleDesc}>Unleash the Eminence of Ecstasy <br />On March 21,22&23</p>
+              <p className={styles.titleDesc}>Unleash the Eminence of Ecstasy <br />On March 21,22 & 23</p>
             </div>
+            <div className={styles.spacer}></div>
             <img src={logo} alt="logo" className={styles.logo} />
           </div>
 
