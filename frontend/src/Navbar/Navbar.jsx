@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styles from "./Navbar.module.css";
 import logo from "../assets/advykabg.webp";
-import { Link } from "react-router-dom";
-const Navbar = () => {
+
+const Navbar = ({ scrollToAbout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}><img src={logo} alt="" /></div>
       <ul className={styles.navLinks}>
-        <li><Link to="/about">About</Link></li>
+        <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToAbout(); }}>About</a></li>
         <li>Proshows</li>
         <li>Events</li>
         <li>Contact</li>
@@ -19,7 +19,7 @@ const Navbar = () => {
       </div>
       {menuOpen && (
         <div className={styles.mobileMenu}>
-          <a href="#"><Link to="/about">About</Link></a>
+          <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToAbout(); }}>About</a>
           <a href="#">Proshows</a>
           <a href="#">Events</a>
           <a href="#">Contact</a>
