@@ -6,11 +6,12 @@ import videoSrc from '../assets/background-video.mp4';
 import Navbar from '../Navbar/Navbar';
 import logo from '../assets/advykabg.webp';
 import About from '../About/About';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
     const videoRef = useRef(null);
-    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0 });
+    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
     useEffect(() => {
         const video = videoRef.current;
@@ -35,17 +36,19 @@ const Home = () => {
             const timeDiff = targetDate - now;
 
             if (timeDiff <= 0) {
-                setTimeLeft({ days: 0, hours: 0 });
+                setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
             } else {
                 const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
-                setTimeLeft({ days, hours });
+                setTimeLeft({ days, hours, minutes, seconds });
             }
         };
 
         updateCountdown();
-        const interval = setInterval(updateCountdown, 3600000);
+        const interval = setInterval(updateCountdown, 1000);
 
         return () => clearInterval(interval);
     }, []);
@@ -76,6 +79,14 @@ const Home = () => {
                         <div className={styles.countdownItem}>
                             <div className={styles.countdownNumber}>{timeLeft.hours}</div>
                             <div className={styles.countdownLabel}>Hours</div>
+                        </div>
+                        <div className={styles.countdownItem}>
+                            <div className={styles.countdownNumber}>{timeLeft.minutes}</div>
+                            <div className={styles.countdownLabel}>Minutes</div>
+                        </div>
+                        <div className={styles.countdownItem}>
+                            <div className={styles.countdownNumber}>{timeLeft.seconds}</div>
+                            <div className={styles.countdownLabel}>Seconds</div>
                         </div>
                     </div>
                     <About />
