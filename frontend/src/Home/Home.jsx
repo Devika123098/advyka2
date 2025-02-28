@@ -5,7 +5,7 @@ import styles from './Home.module.css';
 import videoSrc from '../assets/background-video.mp4';
 import Navbar from '../Navbar/Navbar';
 import logo from '../assets/advykabg.webp';
-
+import About from '../About/About';
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -78,6 +78,7 @@ const Home = () => {
                             <div className={styles.countdownLabel}>Hours</div>
                         </div>
                     </div>
+                    <About />
                 </div>
             </div>
         </>
