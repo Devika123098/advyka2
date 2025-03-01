@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: rgba(196, 191, 235, 0.7);
+  background-color: rgba(23, 20, 44, 0.7);
   backdrop-filter: blur(1px);
   color: white;
   padding: 10px 20px;
@@ -30,7 +30,15 @@
   list-style: none;
   cursor: pointer;
 }
-
+.navLinks li:last-child {
+    width: max-content;
+    height: max-content;
+  padding: 0 10px;
+  border-radius: 15px;
+    background-color: rgba(58, 122, 196, 0.936);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 10px cyan;
+}
 .navLinks li:hover {
   color: lightgray;
 }
