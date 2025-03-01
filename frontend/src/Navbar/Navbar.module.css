@@ -39,6 +39,7 @@
     backdrop-filter: blur(5px);
     box-shadow: 1px 1px 10px cyan;
 }
+
 .navLinks li:hover {
   color: lightgray;
 }
