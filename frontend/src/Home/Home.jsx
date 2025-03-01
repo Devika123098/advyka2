@@ -7,8 +7,17 @@ import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
 import Carousel from "../Carousel/Carousel";
+import  Pastevents  from "../components/Pastevents.jsx";
+
+
+
+import car8 from "../assets/car8.jpg"
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
+
 
 const Home = () => {
   const videoRef = useRef(null);
@@ -106,6 +115,11 @@ const Home = () => {
           <div className={styles.carousel}>
             <h2>Proshows</h2>
             <Carousel/>
+          </div>
+          <div className={styles.app}> 
+            
+            <h2><center>Past Events</center></h2>
+      <Pastevents images={[car8,car8,car8,car8,car8,car8,car8,car8,car8,car8,car8,car8,car8,car8,car8]} />
           </div>
         </div>
       </div>
