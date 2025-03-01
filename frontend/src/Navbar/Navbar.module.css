@@ -7,7 +7,7 @@
   backdrop-filter: blur(1px);
   color: white;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
@@ -37,11 +37,25 @@
   border-radius: 15px;
     background-color: rgba(58, 122, 196, 0.936);
     backdrop-filter: blur(5px);
-    box-shadow: 1px 1px 10px cyan;
+    box-shadow: 1px 1px 15px  #1054ff;
+}
+.navLinks li:last-child:hover {
+  color: white;
+  background-color: rgba(58, 122, 196, 0.936);
+  backdrop-filter: blur(5px);
+  box-shadow: 1px 1px 20px  #1054ff;
+  transition: .2s ease-in-out ;
+}
+.navLinks li:last-child:not(:hover),.navLinks li:not(:hover)  {
+
+  transition: .2s ease-in-out ;
 }
 
 .navLinks li:hover {
-  color: lightgray;
+  color: #1054ff;
+  filter: drop-shadow(1px 1px 15px  #1054ff);
+  transition: .2s ease-in-out ;
+
 }
 
 .hamburger {
