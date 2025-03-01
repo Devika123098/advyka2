@@ -25,7 +25,10 @@ video {
     height: 100%;
     object-fit: cover;
 }
-
+.app{
+ 
+    overflow: hidden;
+}
 .content {
     position: relative;
     z-index: 2;
