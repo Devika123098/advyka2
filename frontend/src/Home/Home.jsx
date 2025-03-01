@@ -23,6 +23,7 @@ import card12 from "../assets/card7.webp";
 import card13 from "../assets/card3.webp";
 import card14 from "../assets/card6.webp";
 import card15 from "../assets/card4.webp";
+import Footer from "../Footer/Footer.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -125,6 +126,9 @@ const Home = () => {
           </div>
           <div className={styles.pastgallery}> 
             <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15]} />
+          </div>
+          <div className={styles.footer}>
+            <Footer/> 
           </div>
         </div>
       </div>
