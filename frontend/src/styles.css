@@ -36,7 +36,11 @@ body::-webkit-scrollbar-thumb {
   background: #322f53;
   border-radius: 20px;
 }
-
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
 
 body::-webkit-scrollbar-thumb:hover {
   background: #c8c5e6;
@@ -46,4 +50,5 @@ body::-webkit-scrollbar-thumb:hover {
       display: flex;
       flex-direction: column;
     }
-  }
+
+

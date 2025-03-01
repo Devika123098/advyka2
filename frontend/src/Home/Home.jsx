@@ -6,6 +6,7 @@ import videoSrc from "../assets/background-video.mp4";
 import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
+import Carousel from "../Carousel/Carousel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +102,10 @@ const Home = () => {
 
           <div ref={aboutRef}>
             <About />
+          </div>
+          <div className={styles.carousel}>
+            <h2>Proshows</h2>
+            <Carousel/>
           </div>
         </div>
       </div>
