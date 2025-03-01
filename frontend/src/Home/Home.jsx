@@ -30,6 +30,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   const videoRef = useRef(null);
   const aboutRef = useRef(null);
+  const footerRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const scrollToAbout = () => {
@@ -37,7 +38,11 @@ const Home = () => {
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     const video = videoRef.current;
     video.pause();
@@ -86,7 +91,7 @@ const Home = () => {
           <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
-      <Navbar scrollToAbout={scrollToAbout} />
+      <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
       <div className={styles.homeContainer}>
         <div className={styles.content}>
           <div className={styles.title}>
@@ -127,7 +132,7 @@ const Home = () => {
           <div className={styles.pastgallery}> 
             <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15]} />
           </div>
-          <div className={styles.footer}>
+          <div ref={footerRef} className={styles.footer}>
             <Footer/> 
           </div>
         </div>

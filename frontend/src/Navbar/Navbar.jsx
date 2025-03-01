@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "../assets/advykabg.webp";
 
-const Navbar = ({ scrollToAbout }) => {
+const Navbar = ({ scrollToAbout,scrollToFooter }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -25,7 +25,9 @@ const Navbar = ({ scrollToAbout }) => {
           </>
         )}
         <li>Events</li>
-        <li>Contact</li>
+        <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>
+                Contacts
+              </a></li>
       </ul>
 
       <div
@@ -45,7 +47,7 @@ const Navbar = ({ scrollToAbout }) => {
           </>
         )}
         <a href="#">Events</a>
-        <a href="#">Contact</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
       </div>
     </nav>
   );

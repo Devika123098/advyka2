@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import { FaInstagram, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
