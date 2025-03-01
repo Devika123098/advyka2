@@ -1,30 +1,52 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "../assets/advykabg.webp";
 
 const Navbar = ({ scrollToAbout }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}><img src={logo} alt="" /></div>
+      <div className={styles.logo}>
+        <Link to="/"><img src={logo} alt="Logo" /></Link>
+      </div>
+
       <ul className={styles.navLinks}>
-        <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToAbout(); }}>About</a></li>
-        <li>Proshows</li>
+        {location.pathname !== "/proshows" && (
+          <>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToAbout(); }}>
+                About
+              </a>
+            </li>
+            <li><Link to="/proshows">Proshows</Link></li>
+          </>
+        )}
         <li>Events</li>
         <li>Contact</li>
       </ul>
-      <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+
+      <div
+        className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✖" : "☰"}
       </div>
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToAbout(); }}>About</a>
-          <a href="#">Proshows</a>
-          <a href="#">Events</a>
-          <a href="#">Contact</a>
-        </div>
-      )}
+
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}>
+        {location.pathname !== "/proshows" && (
+          <>
+            <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToAbout(); }}>
+              About
+            </a>
+            <Link to="/proshows">Proshows</Link>
+          </>
+        )}
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+      </div>
     </nav>
   );
 };

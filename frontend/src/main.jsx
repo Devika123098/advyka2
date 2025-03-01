@@ -10,6 +10,7 @@ import {
   Routes,
   Link,
 } from "react-router-dom";
+import Proshows from './Proshows/Proshows';
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
-  }
+  },
+  {
+    path: "/proshows",
+    element: <Proshows />,
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(
