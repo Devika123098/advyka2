@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styles from './PastEvents.module.css';
 
 const Pastevents = ({ images = [] }) => {
-  // Make sure we have at least 8 images
   const Images = [
     'https://via.placeholder.com/400x200?text=Image+1',
     'https://via.placeholder.com/400x200?text=Image+2',
@@ -20,12 +19,13 @@ const Pastevents = ({ images = [] }) => {
 
   const allImages = images.length >= 8 ? images : Images;
   
-  // Duplicate images to create smooth infinite animation
+
   const topRowImages = [...allImages, ...allImages];
   const bottomRowImages = [...allImages, ...allImages];
 
   return (
     <div className={styles.sliderContainer}>
+      <h2 className={styles.pastHeading}><center>Past Events</center></h2>
       <div className={styles.sliderRow}>
         <div className={styles.slideTrackLeft}>
           {topRowImages.map((src, index) => (

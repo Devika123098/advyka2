@@ -90,7 +90,9 @@ video {
     justify-content: center; 
     width: 100%;
   }
-  
+  .pastHeading{
+    margin-top: 50px;
+  }
 @media (max-width: 768px) {
     
 
