@@ -48,7 +48,7 @@
 }
 .navLinks li:hover::after{
   background-color: #1054ff;
-  width:90px ;
+  width:80px ;
 }
 
 
