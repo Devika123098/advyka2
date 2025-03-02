@@ -21,7 +21,7 @@
 
 .navLinks {
   display: flex;
-  gap: 190px;
+  gap: 170px;
   font-size: 25px;
   font-weight: normal;
 }
@@ -30,7 +30,7 @@
   list-style: none;
   cursor: pointer;
 }
-.navLinks li:last-child {
+/* .navLinks li:last-child {
     width: max-content;
     height: max-content;
   padding: 0 10px;
@@ -51,7 +51,7 @@
 
   transition: .2s ease-in-out ;
 
-}
+} */
 
 .navLinks li:hover {
   color: #1054ff;

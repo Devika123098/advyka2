@@ -24,7 +24,7 @@ import card13 from "../assets/card3.webp";
 import card14 from "../assets/card6.webp";
 import card15 from "../assets/card4.webp";
 import Footer from "../Footer/Footer.jsx";
-import poster from  "../assets/poster.png";
+import poster from  "../assets/poster.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 

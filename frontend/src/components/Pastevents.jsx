@@ -40,7 +40,7 @@ const Pastevents = ({ images = [] }) => {
         </div>
       </div>
       
-      <div className={styles.sliderRow}>
+      {/* <div className={styles.sliderRow}>
         <div className={styles.slideTrackRight}>
           {bottomRowImages.map((src, index) => (
             <div className={styles.slide} key={`bottom-${index}`}>
@@ -52,7 +52,7 @@ const Pastevents = ({ images = [] }) => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
