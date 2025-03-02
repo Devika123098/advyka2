@@ -1,30 +1,58 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import logo from "../assets/advykabg.webp";
-import { Link } from "react-router-dom";
-const Navbar = () => {
+
+
+const Navbar = ({ scrollToAbout,scrollToFooter }) => {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}><img src={logo} alt="" /></div>
-      <ul className={styles.navLinks}>
-        <li><Link to="/about">About</Link></li>
-        <li>Proshows</li>
-        <li>Events</li>
-        <li>Contact</li>
-      </ul>
-      <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
-        ☰
+
+      <div className={styles.logo}>
+        <Link to="/"><img src={logo} alt="Logo" /></Link>
       </div>
-      {menuOpen && (
-        <div className={styles.mobileMenu}>
-          <a href="#"><Link to="/about">About</Link></a>
-          <a href="#">Proshows</a>
-          <a href="#">Events</a>
-          <a href="#">Contact</a>
-        </div>
-      )}
+
+      <ul className={styles.navLinks}>
+        {location.pathname !== "/proshows" && (
+          <>
+            <li>
+              <a href="#" onClick={(e) => { e.preventDefault(); scrollToAbout(); }}>
+                About
+              </a>
+            </li>
+            <li><Link to="/proshows">Proshows</Link></li>
+          </>
+        )}
+        <li>Events</li>
+        <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>
+                Contact
+              </a></li>
+      </ul>
+
+      <div
+        className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? "✖" : "☰"}
+      </div>
+
+      <div className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}>
+        {location.pathname !== "/proshows" && (
+          <>
+            <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToAbout(); }}>
+              About
+            </a>
+            <Link to="/proshows">Proshows</Link>
+          </>
+        )}
+        <a href="#">Events</a>
+        <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
+      </div>
+
     </nav>
   );
 };

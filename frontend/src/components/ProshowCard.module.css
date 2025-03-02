@@ -1,0 +1,104 @@
+.cardContainer {
+    display: flex;
+    background-color: #121212; 
+    color: white;
+    border-radius: 0px;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+
+.imageContainer {
+    flex: 1;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detailsContainer {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.day {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid #888;
+    margin: 15px 0;
+}
+
+.dateSection {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.dateIcon {
+    font-size: 20px;
+}
+
+.bookButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.bookButton svg {
+    font-size: 18px;
+}
+
+.bookButton:hover {
+    background-color: #cc5500;
+}
+
+
+@media (max-width: 768px) {
+    .cardContainer {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        width: 100%;
+        flex: none;
+    }
+
+    .image {
+        height: auto; 
+    }
+
+    .detailsContainer {
+        flex: none; 
+        text-align: center;
+        padding: 15px;
+    }
+
+    .bookButton {
+        width: 100%;
+    }
+}

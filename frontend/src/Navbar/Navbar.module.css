@@ -1,12 +1,13 @@
-.logo{
+.logo {
   width: 30px;
 }
+
 .navbar {
-  background-color: rgba(61, 52, 139, 0.7);
+  background-color: rgba(23, 20, 44, 0.7);
   backdrop-filter: blur(1px);
   color: white;
   padding: 10px 20px;
-  border-radius: 15px;
+  border-radius: 10px;
   width: 80%;
   margin: auto;
   margin-top: 10px;
@@ -20,14 +21,23 @@
 
 .navLinks {
   display: flex;
-  gap: 85px;
-  font-size: 18px;
-  font-weight:normal;
+  gap: 190px;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 .navLinks li {
   list-style: none;
   cursor: pointer;
+}
+.navLinks li:last-child {
+    width: max-content;
+    height: max-content;
+  padding: 0 10px;
+  border-radius: 15px;
+    /* background-color: rgba(58, 122, 196, 0.936);
+    backdrop-filter: blur(5px); */
+    /* box-shadow: 1px 1px 10px cyan; */
 }
 
 .navLinks li:hover {
@@ -38,33 +48,46 @@
   display: none;
   cursor: pointer;
   font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.open {
+  transform: rotate(180deg);
 }
 
 .mobileMenu {
   position: absolute;
-  top: 60px;
+  top: -100vh;
   left: 0;
   width: 100%;
-  background-color: rgba(61, 52, 139, 0.9);
+  height: 80vh;
+  background-color: rgba(196, 191, 235, 0.7);
   backdrop-filter: blur(10px);
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   border-radius: 0 0 15px 15px;
+  transition: top 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.showMenu {
+  top: 60px;
 }
 
 .mobileMenu a {
   display: block;
-  padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   color: white;
   text-decoration: none;
+  padding: 15px 0;
 }
 
 .mobileMenu a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
-
 
 @media (max-width: 768px) {
   .navLinks {
@@ -72,10 +95,6 @@
   }
 
   .hamburger {
-    display: block;
-  }
-
-  .mobileMenu {
     display: block;
   }
 }
