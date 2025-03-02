@@ -11,6 +11,7 @@
   width: 80%;
   margin: auto;
   margin-top: 10px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,17 +21,38 @@
 }
 
 .navLinks {
+    margin-right: 20px;
   display: flex;
-  gap: 190px;
+  gap: 80px;
   font-size: 25px;
   font-weight: normal;
 }
 
-.navLinks li {
-  list-style: none;
-  cursor: pointer;
+/* Underline on list */
+
+.navLinks li::after{
+  content: ".";
+  color: transparent;
+  background-color: aliceblue;
+  display: flex;
+  width: 30px;
+  height: 4px;
+  border-radius: 10px;
+  transition: .2s ease-in-out ;
 }
-.navLinks li:last-child {
+
+.navLinks li:first-child:hover::after,.navLinks li:nth-child(3):hover::after{
+  background-color: #1054ff;
+  width:65px ;
+
+}
+.navLinks li:hover::after{
+  background-color: #1054ff;
+  width:90px ;
+}
+/* Contact blue stuff */
+
+/* .navLinks li:last-child {
     width: max-content;
     height: max-content;
   padding: 0 10px;
@@ -45,8 +67,15 @@
   backdrop-filter: blur(5px);
   box-shadow: 1px 1px 20px  #1054ff;
   transition: .2s ease-in-out ;
+} */
+/* .navLinks li:last-child:not(:hover),*/
+
+
+.navLinks li {
+  list-style: none;
+  cursor: pointer;
 }
-.navLinks li:last-child:not(:hover),.navLinks li:not(:hover)  {
+.navLinks li:not(:hover)  { 
 
   transition: .2s ease-in-out ;
 }
