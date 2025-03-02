@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Scroll bar */
+
 body::-webkit-scrollbar {
   width: 10px;
 }
