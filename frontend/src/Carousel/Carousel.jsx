@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"; 
 import Slider from "react-slick";
-import { IoTicketSharp } from "react-icons/io5"; // Import ticket icon
+import { IoTicketSharp } from "react-icons/io5"; 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css"; 
@@ -54,12 +55,9 @@ const Carousel = () => {
             <img src={show.image} alt={`Proshow ${show.id}`} className={styles.image} />
             <div className={styles.infoOverlay}>
               <p className={styles.eventDate}>{show.date}</p>
-              <button 
-                onClick={() => window.location.href = show.link} 
-                className={styles.ticketButton}
-              >
+              <Link to={show.link} className={styles.ticketButton}>
                 <IoTicketSharp className={styles.ticketIcon} /> Get Tickets
-              </button>
+              </Link>
             </div>
           </div>
         ))}
