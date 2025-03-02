@@ -32,7 +32,7 @@
     font-weight: 500;
   }
   
-  /* Bottom Blur Effect */
+
   .blurBottom {
     position: absolute;
     bottom: 0;
@@ -41,7 +41,7 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   }
   
-  /* Card Section */
+
   .cardSection {
     background-color: black;
     padding: 50px 10%;
@@ -99,4 +99,3 @@
   .bookButton:hover {
     background-color: #ff5e00;
   }
-  

@@ -119,6 +119,7 @@ const Home = () => {
           <div ref={aboutRef}>
             <About />
           </div>
+          <div className={styles.spacer}></div>
           <div className={styles.carousel}>
             <h2>Proshows</h2>
             <Carousel/>
