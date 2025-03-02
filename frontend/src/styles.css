@@ -1,5 +1,6 @@
 @import "tailwindcss";
-/* Scroll bar  */
+
+
 body::-webkit-scrollbar {
   width: 10px;
 }
@@ -45,10 +46,12 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
   background: #c8c5e6;
 }
+
 @media (max-width: 800px) {
     .card-container {
       display: flex;
       flex-direction: column;
     }
+
   }
 
