@@ -124,7 +124,7 @@ const Home = () => {
             <Carousel/>
           </div>
           <div className={styles.pastgallery}> 
-            <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8]} />
+            <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8,card1,card2,card3,card4,card5,card6,card7]} />
           </div>
           <div ref={footerRef} className={styles.footer}>
             <Footer/> 
