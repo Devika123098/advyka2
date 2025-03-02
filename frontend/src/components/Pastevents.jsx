@@ -25,7 +25,7 @@ const Pastevents = ({ images = [] }) => {
 
   return (
     <div className={styles.sliderContainer}>
-      <h2 className={styles.pastHeading}><center>Past Events</center></h2>
+      <h2 className={styles.pastHeading}><center>A Glimpse of Advyka'24</center></h2>
       <div className={styles.sliderRow}>
         <div className={styles.slideTrackLeft}>
           {topRowImages.map((src, index) => (

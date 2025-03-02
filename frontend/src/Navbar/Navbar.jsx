@@ -26,7 +26,7 @@ const Navbar = ({ scrollToAbout,scrollToFooter }) => {
         )}
         <li>Events</li>
         <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>
-                Contacts
+                Contact
               </a></li>
       </ul>
 

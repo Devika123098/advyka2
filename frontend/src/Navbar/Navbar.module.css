@@ -35,6 +35,7 @@
     height: max-content;
   padding: 0 10px;
   border-radius: 15px;
+
     background-color: rgba(58, 122, 196, 0.936);
     backdrop-filter: blur(5px);
     box-shadow: 1px 1px 15px  #1054ff;
@@ -49,6 +50,7 @@
 .navLinks li:last-child:not(:hover),.navLinks li:not(:hover)  {
 
   transition: .2s ease-in-out ;
+
 }
 
 .navLinks li:hover {
