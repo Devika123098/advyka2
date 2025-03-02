@@ -99,3 +99,8 @@
   .bookButton:hover {
     background-color: #ff5e00;
   }
+  @media (max-width: 768px) {
+    .heading{
+      font-size: 60px;
+    }
+  }
