@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Home.module.css";
-import videoSrc from "../assets/background-video.mp4";
+import videoSrc from "../assets/background-video1.mp4";
 import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
@@ -16,13 +16,6 @@ import card5 from "../assets/card5.webp";
 import card6 from "../assets/card6.webp";
 import card7 from "../assets/card7.webp";
 import card8 from "../assets/card8.webp";
-import card9 from "../assets/card1.webp";
-import card10 from "../assets/card8.webp";
-import card11 from "../assets/card2.webp";
-import card12 from "../assets/card7.webp";
-import card13 from "../assets/card3.webp";
-import card14 from "../assets/card6.webp";
-import card15 from "../assets/card4.webp";
 import Footer from "../Footer/Footer.jsx";
 import poster from  "../assets/poster.webp";
 
@@ -131,7 +124,7 @@ const Home = () => {
             <Carousel/>
           </div>
           <div className={styles.pastgallery}> 
-            <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11,card12,card13,card14,card15]} />
+            <Pastevents images={[card1,card2,card3,card4,card5,card6,card7,card8,card1,card2,card3,card4,card5,card6,card7]} />
           </div>
           <div ref={footerRef} className={styles.footer}>
             <Footer/> 
