@@ -82,7 +82,7 @@ const EventDetails = () => {
           </a>
          </div>
        </div>
-      <Footer/>
+      <Footer className= {styles.footer}/>
     </div>
   );
 };
