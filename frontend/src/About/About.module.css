@@ -52,6 +52,36 @@
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 10px 10px 10px black;
 }
+@keyframes borderLight {
+  0% {
+    border-color: rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    border-color: rgba(0, 123, 255, 1);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1);
+  }
+  100% {
+    border-color: rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+}
+
+.about_cards {
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 10px black;
+  animation: borderLight 3s infinite;
+}
+
+.about_cards:last-child {
+  border-radius: 10px;
+  position: relative;
+  top: 50px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 10px black;
+  animation: borderLight 3s infinite;
+}
 @media (max-width: 768px) {
   .card_container {
     display:grid;

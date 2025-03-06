@@ -13,7 +13,7 @@ function About() {
             <h2 className={styles.about_title}>About Advyka</h2>
             <div className={styles.card_container}>
                <div className={styles.about_cards}><Cards  icon = {rocketIcon} title = "Innovation Hub" text = "Experience cutting-edge technology and innovative projects from talented students."/></div> 
-               <div className={styles.about_cards}><Cards icon={trophyIcon} title = "Competitions" text = "Participate in exciting competitions and win amazing prizes worth ₹10,00,000+."/></div> 
+               <div className={styles.about_cards}><Cards icon={trophyIcon} title = "Competitions" text = "Participate in exciting competitions and win amazing prizes worth ₹1,00,000+."/></div> 
             </div>
             </div>
         </section>

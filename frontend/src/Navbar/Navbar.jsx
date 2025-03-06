@@ -27,7 +27,7 @@ const Navbar = ({ scrollToAbout,scrollToFooter }) => {
             <li><Link to="/proshows">Proshows</Link></li>
           </>
         )}
-        <li>Events</li>
+        <li><Link to="/events">Events</Link></li>
         <li><a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>
                 Contact
               </a></li>

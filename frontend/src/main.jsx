@@ -13,7 +13,8 @@ import {
   Link,
 } from "react-router-dom";
 import Proshows from './Proshows/Proshows';
-
+import Events from './Events/Events';
+import EventDetails from './EventDetails/EventDetails';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "/proshows",
     element: <Proshows />,
+  },
+  {
+    path: "/events",
+    element: <Events />,
+  },
+  {
+    path: "/events/:id",
+    element: <EventDetails />,
   },
 
 ]);

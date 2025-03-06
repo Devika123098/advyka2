@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
 .proshowsContainer {
     width: 100%;
     overflow-x: hidden;
@@ -14,7 +16,8 @@
     align-items: center;
     text-align: center;
     color: white;
-    font-family: "Poppins", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
   }
   
   .content {
