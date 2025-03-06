@@ -33,8 +33,12 @@
   h2 {
     font-size: 3rem;
     font-weight: 500;
+    
   }
   
+  .comingSoon{
+    margin-bottom: 100px;
+  }
 
   .blurBottom {
     position: absolute;

@@ -2,14 +2,52 @@
 
 :root {
   --primary-color: #ff7b00;
-  --background-color: #0d0d0d;
+  --background-color: #000000;
   --text-color: #ffffff;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.heroSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('../assets/workshop.webp') center/cover no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 0;
+}
+
+.blurBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh; 
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 10;
+  pointer-events: none;
+}
+.content{
+  margin-bottom: 70px;
+  padding: 20px;
 }
 
 .container {
   background: var(--background-color);
   min-height: 100vh;
-  padding: 40px 20px;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -52,7 +90,22 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
 
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom:90px;
+  }
+  .card{
+    padding: 50px 20px;
+  }
+  .search{
+    width: 80%;
+  }
+}
 .card {
   position: relative;
   border-radius: 12px;
@@ -61,6 +114,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .image {

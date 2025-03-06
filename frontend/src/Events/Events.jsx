@@ -5,12 +5,17 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import styles from "./Events.module.css";
 import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
-
+  const scrollToFooter = () => {
+    if (footerRef.current) {
+      footerRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   useEffect(() => {
     const fetchEvents = async () => {
       const querySnapshot = await getDocs(collection(db, "events"));
@@ -30,6 +35,15 @@ const Events = () => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.heroSection}>
+        <Navbar />
+        <div className={styles.content}>
+        <h1 className={styles.heading}>Advyka Workshops & Events</h1>
+        <h2>2025</h2>
+        </div>
+      <div className={styles.blurBottom}></div> 
+      </div>
+
       <input
         type="text"
         placeholder="Search events..."
