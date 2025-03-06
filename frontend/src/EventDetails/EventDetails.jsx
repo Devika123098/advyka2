@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import styles from "./EventDetails.module.css";
+import Footer from "../Footer/Footer";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -40,7 +41,6 @@ const EventDetails = () => {
     return <h2 className={styles.error}>Event not found.</h2>;
   }
 
-  // Manually extract coordinators
   const coordinators = [];
   if (event.cor1_name && event.cor1_num) {
     coordinators.push({ name: event.cor1_name, phone: event.cor1_num });
@@ -58,12 +58,11 @@ const EventDetails = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{event.eventName}</h1>
-      <div className={styles.content}>
+      <div className={styles.card}>
         <img src={event.eventPoster} alt={event.eventName} className={styles.poster} />
         <div className={styles.details}>
           <p className={styles.date}>Date: {event.eventDate}</p>
           <p className={styles.description}>{event.eventDescription}</p>
-
           {coordinators.length > 0 ? (
             <>
               <h3>Coordinators:</h3>
@@ -78,12 +77,12 @@ const EventDetails = () => {
           ) : (
             <p>No coordinators available.</p>
           )}
-
           <a href={event.googleFormLink} target="_blank" rel="noopener noreferrer" className={styles.register}>
             Register Now
           </a>
-        </div>
-      </div>
+         </div>
+       </div>
+      <Footer/>
     </div>
   );
 };
