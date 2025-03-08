@@ -26,7 +26,6 @@ const Home = () => {
   const aboutRef = useRef(null);
   const footerRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const [videoPlayedOnce, setVideoPlayedOnce] = useState(false);
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -42,22 +41,10 @@ const Home = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-    video.pause();
+    if (!video) return;
 
-    gsap.to(video, {
-      currentTime: video.duration || 5,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: video,
-        start: "top top",
-        end: "+=3000px",
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-      },
-    });
+    video.play();
 
-    // Countdown logic
     const targetDate = new Date("March 21, 2025 00:00:00").getTime();
 
     const updateCountdown = () => {
@@ -117,14 +104,23 @@ const Home = () => {
   return (
     <>
       <div className={styles.videoContainer}>
-        <video ref={videoRef} className={styles.video} preload="auto" autoPlay muted loop poster={poster}>
-          <source src={videoSrc} type="video/mp4" />
+        <video
+          ref={videoRef}
+          className={styles.video}
+          preload="auto"
+          autoPlay
+          muted
+          playsInline
+          poster={poster}
+          loop={false}
+        >
+          <source src={videoSrc} type="video/webm" />
         </video>
       </div>
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
       <div className={styles.homeContainer}>
         <div className={styles.content}>
-           <div className={styles.light}></div>
+          <div className={styles.light}></div>
           <div className={styles.title}>
             <div className={styles.titledivi}>
               <h2 className={styles.titleName}>Advyka'25</h2>
