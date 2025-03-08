@@ -175,8 +175,8 @@ const Home = () => {
           </div>
           <div className={styles.spacer}></div>
           <div className={styles.carousel}>
-            <h2>Proshows</h2>
-            <Carousel />
+            {/* <h2>Proshows</h2>
+            <Carousel /> */}
           </div>
           <div className={styles.pastgallery}>
             <Pastevents images={[card1, card2, card3, card4, card5, card6, card7, card8]} />

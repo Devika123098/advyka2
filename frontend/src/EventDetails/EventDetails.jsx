@@ -57,6 +57,7 @@ const EventDetails = () => {
 
   return (
     <div className={styles.container}>
+      <h4 className={styles.presents}>Advyka Presents</h4>
       <h1 className={styles.title}>{event.eventName}</h1>
       <div className={styles.card}>
         <img src={event.eventPoster} alt={event.eventName} className={styles.poster} />
