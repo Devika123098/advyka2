@@ -146,6 +146,7 @@ video {
         font-size: 2rem;
         margin-left: 43px;
         margin-top: 30px;
+        margin-bottom: 5px;
     }
 
     .titleDesc {
@@ -184,4 +185,5 @@ video {
     .countdownLabel {
         font-size: 12px;
     }
+   
 }
