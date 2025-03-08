@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Home.module.css";
-import videoSrc from "../assets/background-video1.mp4";
+import videoSrc from "../assets/background-video1.webm";
 import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
@@ -26,6 +26,7 @@ const Home = () => {
   const aboutRef = useRef(null);
   const footerRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [videoPlayedOnce, setVideoPlayedOnce] = useState(false);
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -41,21 +42,44 @@ const Home = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-    video.pause();
+    if (!video) return;
 
-    gsap.to(video, {
-      currentTime: video.duration || 5,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: video,
-        start: "top top",
-        end: "+=3000px",
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-      },
+    // Ensure the video is preloaded
+    video.preload = "auto";
+
+    // Handle the end of the video
+    const handleVideoEnd = () => {
+      if (!videoPlayedOnce) {
+        setVideoPlayedOnce(true);
+        video.currentTime = video.duration - 2; // Set to the last 2 seconds
+        video.loop = true; // Enable looping
+        video.play(); // Start playing again
+      }
+    };
+
+    video.addEventListener("ended", handleVideoEnd);
+
+    // Cleanup the event listener
+    return () => {
+      video.removeEventListener("ended", handleVideoEnd);
+    };
+  }, [videoPlayedOnce]); // Add videoPlayedOnce as a dependency
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // ScrollTrigger setup
+    ScrollTrigger.create({
+      trigger: video,
+      start: "top top",
+      end: "+=3000px",
+      scrub: 1,
+      pin: true,
+      pinSpacing: false,
     });
 
+    // Countdown logic
     const targetDate = new Date("March 21, 2025 00:00:00").getTime();
 
     const updateCountdown = () => {
@@ -65,18 +89,17 @@ const Home = () => {
       if (timeDiff <= 0) {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
-        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hours, minutes, seconds });
+        setTimeLeft({
+          days: Math.floor(timeDiff / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((timeDiff % (1000 * 60)) / 1000),
+        });
       }
     };
 
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -116,8 +139,17 @@ const Home = () => {
   return (
     <>
       <div className={styles.videoContainer}>
-        <video ref={videoRef} className={styles.video} preload="auto" autoPlay muted loop poster={poster}>
-          <source src={videoSrc} type="video/mp4" />
+        <video
+          ref={videoRef}
+          className={styles.video}
+          preload="auto"
+          autoPlay
+          muted
+          playsInline
+          poster={poster}
+          loop={false} // Disable looping initially
+        >
+          <source src={videoSrc} type="video/webm" />
         </video>
       </div>
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
