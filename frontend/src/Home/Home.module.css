@@ -203,7 +203,7 @@ video {
     filter: blur(50px);
     opacity: 0; 
     animation: showAndBlink 2s infinite ease-out;
-    animation-delay: 0s; 
+    animation-delay: 7s; 
 }
 
 @keyframes showAndBlink {

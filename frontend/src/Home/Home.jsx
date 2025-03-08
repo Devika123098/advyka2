@@ -40,21 +40,21 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const video = videoRef.current;
-    video.pause();
+    // const video = videoRef.current;
+    // video.pause();
 
-    gsap.to(video, {
-      currentTime: video.duration || 5,
-      ease: "power1.out",
-      scrollTrigger: {
-        trigger: video,
-        start: "top top",
-        end: "+=3000px",
-        scrub: 1,
-        pin: true,
-        pinSpacing: false,
-      },
-    });
+    // gsap.to(video, {
+    //   currentTime: video.duration || 5,
+    //   ease: "power1.out",
+    //   scrollTrigger: {
+    //     trigger: video,
+    //     start: "top top",
+    //     end: "+=3000px",
+    //     scrub: 1,
+    //     pin: true,
+    //     pinSpacing: false,
+    //   },
+    // })
 
     const targetDate = new Date("March 21, 2025 00:00:00").getTime();
 
@@ -116,7 +116,7 @@ const Home = () => {
   return (
     <>
       <div className={styles.videoContainer}>
-        <video ref={videoRef} className={styles.video} preload="auto" autoPlay muted loop poster={poster}>
+        <video ref={videoRef} className={styles.video} preload="auto" autoPlay muted poster={poster}>
           <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
