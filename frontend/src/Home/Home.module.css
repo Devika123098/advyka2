@@ -226,53 +226,34 @@ video {
 
 /* Responsive light effect */
 
-@media (max-width: 650px) {
+ 
+
+@media (max-width: 768px) {
     .light{
       top: 50%;
-      left:-60px;
-       height: 200px;
-       width: 600px;
-       padding: 10px;
-  }}
-
-
-  @media (max-width: 768px) {
-    .light{
-      top: 50%;
-  
-      left:-100px; 
-     right: 100px;
-       height: 200px;
-       width: 600px;
-       padding: 10px;
-  }}
-  @media (max-width: 468px) {
-    .light{
-      top: 50%;
-       translate: -35% ;
-       height: 200px;
-       width: 600px;
-       padding: 10px;
-  }}
-
+      translate: -30% ;
+  }} 
   @media (max-width: 968px) {
     .light{
       top: 50%;
-  
-      left:-10px; 
-     right: 100px;
-       height: 200px;
-       width: 600px;
-       padding: 10px;
+      translate: -25% ;
+    
   }}
-  
-  
-  @media (max-width: 1008px) {
+    
+  @media (max-width: 588px) {
     .light{
       top: 50%;
-       translate: -15% ;
-       height: 200px;
-       width: 600px;
-       padding: 10px;
+       translate: -40% ;
+       height: 80px;
+       width: 550px;
+      
   }}
 
+  @media (max-width: 488px) {
+    .light{
+      top: 50%;
+       translate: -40% ;
+       height: 80px;
+       width: 550px;
+      
+  }}
