@@ -12,10 +12,10 @@ const Footer = () => {
           <h3 className={styles.footerHeading}>Get in touch</h3>
           <p className={styles.footerText}>advyka@gmail.com</p>
           <div className={styles.socialIcons}>
-            <a href="https://instagram.com" aria-label="Instagram">
+            <a href="http://instagram.com/advyka.cep/" aria-label="Instagram">
               <FaInstagram className={styles.icon} />
             </a>
-            <a href="https://wa.me" aria-label="WhatsApp">
+            <a href="https://www.whatsapp.com/channel/0029VbA6MtbHgZWTu5uDfw2l" aria-label="WhatsApp">
               <FaWhatsapp className={styles.icon} />
             </a>
             <a href="https://linkedin.com" aria-label="LinkedIn">

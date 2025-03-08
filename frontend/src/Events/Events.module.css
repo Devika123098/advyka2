@@ -15,7 +15,7 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url('../assets/workshop.webp') center/cover no-repeat;
+  background: url('../assets/workshopreduced.webp') center/cover no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
