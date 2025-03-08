@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Home.module.css";
-import videoSrc from "../assets/background-video1.webm";
+import videoDesktop from "../assets/background-video.webm";
+import videoMobile from "../assets/background-mobile.webm";
 import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
@@ -26,6 +27,7 @@ const Home = () => {
   const aboutRef = useRef(null);
   const footerRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
   const scrollToAbout = () => {
     if (aboutRef.current) {
@@ -43,6 +45,9 @@ const Home = () => {
     const video = videoRef.current;
     if (!video) return;
 
+    // Set the correct video source based on screen width
+    video.src = isMobile ? videoMobile : videoDesktop;
+    video.load(); // Reload the video with the new source
     video.play();
 
     const targetDate = new Date("March 21, 2025 00:00:00").getTime();
@@ -65,8 +70,18 @@ const Home = () => {
 
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
-    return () => clearInterval(interval);
-  }, []);
+
+    // Handle window resize to update the video source
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [isMobile]);
 
   const textLines = ["Unleash the Eminence of Ecstasy", "On March 21, 22 & 23"];
   const [typedText, setTypedText] = useState(["", ""]);
@@ -114,7 +129,7 @@ const Home = () => {
           poster={poster}
           loop={false}
         >
-          <source src={videoSrc} type="video/webm" />
+          {/* No <source> elements here; the source is set dynamically in useEffect */}
         </video>
       </div>
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
