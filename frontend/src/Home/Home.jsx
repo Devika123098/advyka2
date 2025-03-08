@@ -42,41 +42,19 @@ const Home = () => {
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    video.pause();
 
-    // Ensure the video is preloaded
-    video.preload = "auto";
-
-    // Handle the end of the video
-    const handleVideoEnd = () => {
-      if (!videoPlayedOnce) {
-        setVideoPlayedOnce(true);
-        video.currentTime = video.duration - 2; // Set to the last 2 seconds
-        video.loop = true; // Enable looping
-        video.play(); // Start playing again
-      }
-    };
-
-    video.addEventListener("ended", handleVideoEnd);
-
-    // Cleanup the event listener
-    return () => {
-      video.removeEventListener("ended", handleVideoEnd);
-    };
-  }, [videoPlayedOnce]); // Add videoPlayedOnce as a dependency
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // ScrollTrigger setup
-    ScrollTrigger.create({
-      trigger: video,
-      start: "top top",
-      end: "+=3000px",
-      scrub: 1,
-      pin: true,
-      pinSpacing: false,
+    gsap.to(video, {
+      currentTime: video.duration || 5,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: video,
+        start: "top top",
+        end: "+=3000px",
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
+      },
     });
 
     // Countdown logic
@@ -139,17 +117,8 @@ const Home = () => {
   return (
     <>
       <div className={styles.videoContainer}>
-        <video
-          ref={videoRef}
-          className={styles.video}
-          preload="auto"
-          autoPlay
-          muted
-          playsInline
-          poster={poster}
-          loop={false} // Disable looping initially
-        >
-          <source src={videoSrc} type="video/webm" />
+        <video ref={videoRef} className={styles.video} preload="auto" autoPlay muted loop poster={poster}>
+          <source src={videoSrc} type="video/mp4" />
         </video>
       </div>
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
