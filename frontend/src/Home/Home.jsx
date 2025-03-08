@@ -45,9 +45,8 @@ const Home = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Set the correct video source based on screen width
     video.src = isMobile ? videoMobile : videoDesktop;
-    video.load(); // Reload the video with the new source
+    video.load(); 
     video.play();
 
     const targetDate = new Date("March 21, 2025 00:00:00").getTime();
@@ -71,7 +70,6 @@ const Home = () => {
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
 
-    // Handle window resize to update the video source
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 767);
     };
@@ -129,7 +127,6 @@ const Home = () => {
           poster={poster}
           loop={false}
         >
-          {/* No <source> elements here; the source is set dynamically in useEffect */}
         </video>
       </div>
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
