@@ -155,6 +155,7 @@ const Home = () => {
       <Navbar scrollToAbout={scrollToAbout} scrollToFooter={scrollToFooter} />
       <div className={styles.homeContainer}>
         <div className={styles.content}>
+           <div className={styles.light}></div>
           <div className={styles.title}>
             <div className={styles.titledivi}>
               <h2 className={styles.titleName}>Advyka'25</h2>
