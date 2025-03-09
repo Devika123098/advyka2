@@ -41,18 +41,19 @@ const Events = () => {
         <div className={styles.content}>
         <h1 className={styles.heading}>Advyka Workshops & Events</h1>
         <h2>2025</h2>
+        <h2 className={styles.comingSoon}>Coming Soon</h2>
         </div>
       <div className={styles.blurBottom}></div> 
       </div>
 
-      <input
+      {/* <input
         type="text"
         placeholder="Search events..."
         className={styles.search}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-      />
-      <div className={styles.grid}>
+      /> */}
+      {/* <div className={styles.grid}>
         {filteredEvents.map((event) => (
           <div key={event.id} className={styles.card}>
             <img
@@ -74,7 +75,7 @@ const Events = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <div ref={footerRef} className={styles.footer}>
             <Footer />
           </div>

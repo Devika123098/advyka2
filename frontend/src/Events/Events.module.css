@@ -84,6 +84,9 @@ html, body {
   width: 100%;
   max-width: 1200px;
 }
+.comingSoon{
+  margin-bottom: 100px;
+}
 
 @media (min-width: 900px) {
   .grid {
