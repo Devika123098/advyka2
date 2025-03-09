@@ -15,11 +15,16 @@ import {
 import Proshows from './Proshows/Proshows';
 import Events from './Events/Events';
 import EventDetails from './EventDetails/EventDetails';
+import Loading from './Loading/Loading';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: (
+      <Loading >
+        <Home />
+      </Loading>
+    ),
   },
   {
     path: "/about",
@@ -28,15 +33,27 @@ const router = createBrowserRouter([
   },
   {
     path: "/proshows",
-    element: <Proshows />,
+    element: (
+      <Loading >
+        <Proshows />
+      </Loading>
+    ),
   },
   {
     path: "/events",
-    element: <Events />,
+    element: (
+      <Loading >
+        <Events/>
+      </Loading>
+    ),
   },
   {
     path: "/events/:id",
-    element: <EventDetails />,
+    element: (
+      <Loading >
+        <EventDetails />
+      </Loading>
+    ),
   },
 
 ]);

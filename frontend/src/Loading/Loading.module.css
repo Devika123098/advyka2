@@ -1,0 +1,62 @@
+.loadingContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 9999;
+  }
+  
+  .logoContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    animation: comeForward 4.5s ease-in-out forwards;
+  }
+  
+  @keyframes comeForward {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+  }
+  
+  .textContainer {
+    margin-top: 27vh;
+    opacity: 0;
+    animation: fadeIn 3.5s ease-in-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .text {
+    font-family: "Arial", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
