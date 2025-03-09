@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect ,useRef} from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -11,6 +11,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  const footerRef = useRef(null);
   const scrollToFooter = () => {
     if (footerRef.current) {
       footerRef.current.scrollIntoView({ behavior: "smooth" });
@@ -36,7 +37,7 @@ const Events = () => {
   return (
     <div className={styles.container}>
       <div className={styles.heroSection}>
-        <Navbar />
+        <Navbar scrollToFooter={scrollToFooter} />
         <div className={styles.content}>
         <h1 className={styles.heading}>Advyka Workshops & Events</h1>
         <h2>2025</h2>
@@ -74,7 +75,9 @@ const Events = () => {
           </div>
         ))}
       </div>
-      <Footer />
+      <div ref={footerRef} className={styles.footer}>
+            <Footer />
+          </div>
     </div>
   );
 };
