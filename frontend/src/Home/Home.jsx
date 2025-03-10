@@ -8,15 +8,7 @@ import Navbar from "../Navbar/Navbar";
 import logo from "../assets/advykabg.webp";
 import About from "../About/About";
 import Carousel from "../Carousel/Carousel";
-import Pastevents from "../components/Pastevents.jsx";
-import card1 from "../assets/card1.webp";
-import card2 from "../assets/card2.webp";
-import card3 from "../assets/card3.webp";
-import card4 from "../assets/card4.webp";
-import card5 from "../assets/card5.webp";
-import card6 from "../assets/card6.webp";
-import card7 from "../assets/card7.webp";
-import card8 from "../assets/card8.webp";
+import Pastevents from "../PastEvents/Pastevents.jsx";
 import Footer from "../Footer/Footer.jsx";
 import poster from "../assets/poster.webp";
 
@@ -179,7 +171,7 @@ const Home = () => {
             <Carousel />
           </div>
           <div className={styles.pastgallery}>
-            <Pastevents images={[card1, card2, card3, card4, card5, card6, card7, card8]} />
+            <Pastevents />
           </div>
           <div ref={footerRef} className={styles.footer}>
             <Footer />
