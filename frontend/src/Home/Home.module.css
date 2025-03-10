@@ -43,16 +43,35 @@ video {
     width: 100%;
 }
 .logo{
-    width: 50vh;
-    margin-left: 45vh;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    object-fit: contain;
+    top: 35%;
+    left: 70%;
+    filter: drop-shadow(5px 5px 20px rgba(202, 241, 255, 0.634));
+    transition: filter 3s ease;
+    animation: appear 2s ease;
 }
-
+@keyframes appear {
+    from{
+        opacity: 0.5;
+        left: 40%;
+    }
+    
+}
 .title {
     position: relative; 
     margin-left: 23vh;
     margin-top: 23vh;
     display: flex;
     font-weight: 400;
+    animation: titleAppear 5s ease;
+}
+@keyframes titleAppear {
+    from{
+        color: rgb(12, 69, 191);
+    }
 }
 .titledivi{
     width: 500px;
@@ -70,7 +89,9 @@ video {
     display: flex;
     gap: 10px;
     padding-left: 23vh;
+    transition: ease .5s;
     padding-top: 32px;
+    margin-bottom: 10vh;
 }
 
 .countdownItem {
@@ -84,7 +105,8 @@ video {
     border-radius: 10px;
     text-align: center;
     min-width: 50px;
-    background: gray;
+    background: rgba(9, 117, 194, 0.659);
+    filter: drop-shadow(5px 8px 10px rgba(50, 117, 242, 0.514));
     font-size: 24px;
     font-weight: bold;
 }
@@ -155,20 +177,21 @@ video {
     }
 
     .logo {
+        display: flex;
+        margin: 195px 30px 0 0;
         width: 160px;
-        margin-left: 0;
-        margin-right: 30px;
         align-self: flex-end;
-        margin-top: 20px;
+     
     }
 
     .countdownBox {
         padding-left: 0;
-        padding-top: 20px;
+        padding-top: 125px;
         margin-right: 10px;
         flex-direction: row;
         justify-content: flex-end;
         gap: 5px;
+        
     }
 
     .countdownItem {
@@ -247,7 +270,8 @@ video {
        height: 80px;
        width: 550px;
       
-  }}
+  }
+}
 
   @media (max-width: 488px) {
     .light{
@@ -256,4 +280,26 @@ video {
        height: 80px;
        width: 550px;
       
-  }}
+  }
+  .countdownBox {
+    position: relative;
+
+    padding: 0;
+
+    
+}
+  .logo {
+    padding-bottom: 0px;
+    margin: 0 30px 0 0;
+    position: relative;
+    top: 0vh;
+    left: 0;
+    animation: logoAppear 2s ease;
+}
+    @keyframes logoAppear {
+        from{
+            opacity: 0.5;
+            translate: -50% -100%;
+        }
+    }
+  }
