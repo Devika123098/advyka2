@@ -111,5 +111,6 @@
     align-items: center;
     justify-content: center;
     /* margin-left: 10vh; */
+    margin: 0 0.25rem;
   }
 }
