@@ -15,24 +15,25 @@ const images = [card1, card2, card3, card4, card5, card6, card7, card8];
 const Carousel3D = () => {
   return (
     <div className={styles.carouselContainer}>
-      <div className={styles.carousel}>
-        {images.map((src, i) => {
-          const angle = (i * 360) / images.length;
-          return (
-            <div
-              key={i}
-              className={styles.card}
-              style={{
-                transform: `rotate(${angle}deg) translateX(200px) rotate(-${angle}deg)`,
-                animationDelay: `${-i * (10 / images.length)}s`,
-              }}
-            >
-              <img src={src} alt={`Card ${i + 1}`} className={styles.cardImage} />
-            </div>
-          );
-        })}
+      <div className={styles.scene}>
         <div className={styles.logoContainer}>
           <img src={advykabg} alt="Advyka Logo" className={styles.logo} />
+        </div>
+        <div className={styles.carousel}>
+          {images.map((src, i) => {
+            const angle = (i * 360) / images.length;
+            return (
+              <div
+                key={i}
+                className={styles.card}
+                style={{
+                  transform: `rotateY(${angle}deg) translateZ(300px)`,
+                }}
+              >
+                <img src={src} alt={`Card ${i + 1}`} className={styles.cardImage} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
