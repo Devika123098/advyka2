@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 
 .logo {
   width: 30px;
@@ -20,7 +22,7 @@
   position: sticky;
   top: 10px;
   z-index: 1000;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "El Messiri", sans-serif;
   font-optical-sizing: auto;
 }
 

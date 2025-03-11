@@ -14,7 +14,7 @@ const Loading = ({ children }) => {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3500);
+    }, 5500);
 
     const textTimer = setTimeout(() => {
       setShowText(true);

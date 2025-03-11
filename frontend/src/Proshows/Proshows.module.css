@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 
 .proshowsContainer {
     width: 100%;
@@ -16,7 +17,7 @@
     align-items: center;
     text-align: center;
     color: white;
-    font-family: "Space Grotesk", sans-serif;
+    font-family: "El Messiri", sans-serif;
     font-optical-sizing: auto;
   }
   
