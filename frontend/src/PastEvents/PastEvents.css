@@ -32,7 +32,8 @@
     min-width: 400px;
     display: flex;
     filter: blur(15px);
-    margin: 0 0;
+    margin-bottom:20vh;
+    margin-left: 0;
     animation: beat 3s infinite;
     transition: ease;
      

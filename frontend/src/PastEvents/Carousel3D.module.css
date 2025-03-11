@@ -9,10 +9,10 @@
 .carouselContainer {
   width: 50%;
   height: 10vh;
-
+  margin-top: -10px;
+  margin: auto auto;
   border-radius: 50%;
   display: flex;
-  margin: auto auto;
   justify-content: center;
   align-items: center;
   perspective: 1000px;
