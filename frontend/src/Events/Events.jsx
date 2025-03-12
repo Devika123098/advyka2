@@ -46,14 +46,14 @@ const Events = () => {
       <div className={styles.blurBottom}></div> 
       </div>
 
-      {/* <input
+      <input
         type="text"
         placeholder="Search events..."
         className={styles.search}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-      /> */}
-      {/* <div className={styles.grid}>
+      
+      <div className={styles.grid}>
         {filteredEvents.map((event) => (
           <div key={event.id} className={styles.card}>
             <img
@@ -75,7 +75,7 @@ const Events = () => {
             </div>
           </div>
         ))}
-      </div> */}
+      </div>
       <div ref={footerRef} className={styles.footer}>
             <Footer />
           </div>
