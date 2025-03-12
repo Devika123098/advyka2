@@ -33,13 +33,13 @@ const EventDetails = () => {
     fetchEvent();
   }, [id]);
 
-  // if (loading) {
-  //   return <h2 className={styles.loading}>Loading event details...</h2>;
-  // }
+  if (loading) {
+    return <h2 className={styles.loading}>Loading event details...</h2>;
+  }
 
-  // if (!event) {
-  //   return <h2 className={styles.error}>Event not found.</h2>;
-  // }
+  if (!event) {
+    return <h2 className={styles.error}>Event not found.</h2>;
+  }
 
   const coordinators = [];
   if (event.cor1_name && event.cor1_num) {
