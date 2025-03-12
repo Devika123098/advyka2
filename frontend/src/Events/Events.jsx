@@ -51,7 +51,7 @@ const Events = () => {
         className={styles.search}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-      
+      />
       <div className={styles.grid}>
         {filteredEvents.map((event) => (
           <div key={event.id} className={styles.card}>
