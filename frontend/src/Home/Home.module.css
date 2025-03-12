@@ -3,7 +3,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 
-.homeContainer {
+  @font-face {
+    font-family: Shuttle;
+    src: url("../assets/SHUTTLE-X.ttf");
+  }
+  @font-face {
+    font-family: advyka;
+    src: url("../assets/Horst_Blackletter_Demo.ttf");
+  }
+  .homeContainer {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -12,7 +20,7 @@
     z-index: 1;
     overflow-x: hidden;
     overflow-y: visible;
-    font-family: "El Messiri", sans-serif;
+    font-family:Shuttle,"El Messiri", sans-serif;
     font-optical-sizing: auto;
 }
 .videoContainer {
@@ -75,10 +83,12 @@ video {
     }
 }
 .titledivi{
+   
     width: 500px;
     height: 200px;
 }
 .titleDesc{
+  
     font-size:19px;
 }
 .titleName{
@@ -101,6 +111,7 @@ video {
 }
 
 .countdownNumber {
+    font-family:Shuttle;
     padding: 10px 15px;
     border-radius: 10px;
     text-align: center;

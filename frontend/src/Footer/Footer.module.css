@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
+@font-face {
+  font-family: Shuttle;
+  src: url("../assets/SHUTTLE-X.ttf");
+}
 .footer {
+  /* background-color: #44a0dd69;
+    backdrop-filter: blur(10px); 
+    width:100%;*/
     width: 93%;
     padding: 20px;
+    
     color: white;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    font-family: "Space Grotesk", sans-serif;
+    font-family:Shuttle, "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
   }
   
