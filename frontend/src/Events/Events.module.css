@@ -215,3 +215,7 @@ html, body {
 .filterButton.active {
   background: #2203ac;
 }
+.footer{
+  width: 100%;
+  margin-top: 90px;
+}

@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.footerContent}>
         <div className={styles.footerSection}>
           <h3 className={styles.footerHeading}>Get in touch</h3>
-          <p className={styles.footerText}>advyka@gmail.com</p>
+          <p className={styles.footerText}>advykatech@gmail.com</p>
           <div className={styles.socialIcons}>
             <a href="http://instagram.com/advyka.cep/" aria-label="Instagram">
               <FaInstagram className={styles.icon} />
