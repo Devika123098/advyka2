@@ -113,13 +113,26 @@ html, body {
     width: 80%;
   }
   .filterContainer {
-    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 70%;
   }
 
   .filterButton {
-    width: 70px;
-    font-size: 14px;  
-    padding: 9px 19px; 
+    flex: 1 1 calc(33.33% - 8px);
+    max-width: calc(33.33% - 8px);
+    padding: 8px;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+  }
+
+  .filterButton:nth-child(4),
+  .filterButton:nth-child(5) {
+    flex: 1 1 calc(50% - 8px);
+    width:50px;
   }
 }
 .card {
