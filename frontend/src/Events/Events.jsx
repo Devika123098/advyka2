@@ -1,4 +1,4 @@
-import { useState, useEffect ,useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -10,13 +10,16 @@ import Navbar from "../Navbar/Navbar";
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [search, setSearch] = useState("");
+  const [selectedDept, setSelectedDept] = useState("ALL");
   const navigate = useNavigate();
   const footerRef = useRef(null);
+
   const scrollToFooter = () => {
     if (footerRef.current) {
       footerRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   useEffect(() => {
     const fetchEvents = async () => {
       const querySnapshot = await getDocs(collection(db, "events"));
@@ -31,7 +34,8 @@ const Events = () => {
   }, []);
 
   const filteredEvents = events.filter((event) =>
-    event.eventName.toLowerCase().includes(search.toLowerCase())
+    event.eventName.toLowerCase().includes(search.toLowerCase()) &&
+    (selectedDept === "ALL" || event.department === selectedDept)
   );
 
   return (
@@ -39,10 +43,10 @@ const Events = () => {
       <div className={styles.heroSection}>
         <Navbar scrollToFooter={scrollToFooter} />
         <div className={styles.content}>
-        <h1 className={styles.heading}>Advyka Workshops & Events</h1>
-        <h2>2025</h2>
+          <h1 className={styles.heading}>Advyka Workshops & Events</h1>
+          <h2>2025</h2>
         </div>
-      <div className={styles.blurBottom}></div> 
+        <div className={styles.blurBottom}></div>
       </div>
 
       <input
@@ -52,6 +56,21 @@ const Events = () => {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
+
+      <div className={styles.filterContainer}>
+        {["ALL", "CSE", "ECE", "EEE", "MECH"].map((dept) => (
+          <button
+            key={dept}
+            className={`${styles.filterButton} ${
+              selectedDept === dept ? styles.active : ""
+            }`}
+            onClick={() => setSelectedDept(dept)}
+          >
+            {dept}
+          </button>
+        ))}
+      </div>
+
       <div className={styles.grid}>
         {filteredEvents.map((event) => (
           <div key={event.id} className={styles.card}>
@@ -75,9 +94,10 @@ const Events = () => {
           </div>
         ))}
       </div>
+
       <div ref={footerRef} className={styles.footer}>
-            <Footer />
-          </div>
+        <Footer />
+      </div>
     </div>
   );
 };
