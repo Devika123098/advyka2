@@ -4,6 +4,7 @@ import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import styles from "./EventDetails.module.css";
 import Footer from "../Footer/Footer";
+import Loading from "../Loading/Loading";
 
 const EventDetails = () => {
   const { id } = useParams();
@@ -34,7 +35,7 @@ const EventDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <h2 className={styles.loading}>Loading event details...</h2>;
+    return <Loading />;
   }
 
   if (!event) {
