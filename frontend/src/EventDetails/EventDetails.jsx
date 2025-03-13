@@ -63,7 +63,10 @@ const EventDetails = () => {
         <img src={event.eventPoster} alt={event.eventName} className={styles.poster} />
         <div className={styles.details}>
           <p className={styles.date}>Date: {event.eventDate}</p>
-          <p className={styles.description}>{event.eventDescription}</p>
+          <p className={styles.description} style={{ whiteSpace: "pre-line" }}>
+              {event.eventDescription}
+            </p>
+
           {coordinators.length > 0 ? (
             <>
               <h3>Coordinators:</h3>
