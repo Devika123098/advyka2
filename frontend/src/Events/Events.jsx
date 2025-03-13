@@ -35,7 +35,7 @@ const Events = () => {
 
   const filteredEvents = events.filter((event) =>
     event.eventName.toLowerCase().includes(search.toLowerCase()) &&
-    (selectedDept === "ALL" || event.department === selectedDept)
+    (selectedDept === "ALL" || event.department === "COMMON" || event.department === selectedDept)
   );
 
   return (
