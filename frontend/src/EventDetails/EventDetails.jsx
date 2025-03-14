@@ -5,11 +5,14 @@ import { doc, getDoc } from "firebase/firestore";
 import styles from "./EventDetails.module.css";
 import Footer from "../Footer/Footer";
 import Loading from "../Loading/Loading";
+import { FiShare2 , FiEdit} from "react-icons/fi";
 
 const EventDetails = () => {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [showPopup, setShowPopup] = useState(false);
+
 
   useEffect(() => {
     const fetchEvent = async () => {
@@ -41,7 +44,12 @@ const EventDetails = () => {
   if (!event) {
     return <h2 className={styles.error}>Event not found.</h2>;
   }
-
+  const handleShare = () => {
+    const eventLink = `https://advyka.in/${id}`;
+    navigator.clipboard.writeText(eventLink);
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2000);
+  };
   const coordinators = [];
   if (event.cor1_name && event.cor1_num) {
     coordinators.push({ name: event.cor1_name, phone: event.cor1_num });
@@ -82,11 +90,23 @@ const EventDetails = () => {
           ) : (
             <p>No coordinators available.</p>
           )}
+          <div className={styles.buttonContainer}>
           <a href={event.googleFormLink} target="_blank" rel="noopener noreferrer" className={styles.register}>
-            Register Now
+          <FiEdit size={20} />
+            Register
           </a>
+          <button className={styles.share} onClick={handleShare}>
+              <FiShare2 size={20} /> Share
+            </button>
+          </div>
          </div>
        </div>
+       {showPopup && (
+          <div className={styles.popup}>
+            Link copied to clipboard
+          <div className={styles.timeline}></div>
+      </div>
+      )}
       <Footer className= {styles.footer}/>
     </div>
   );
