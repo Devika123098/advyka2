@@ -45,7 +45,7 @@ const EventDetails = () => {
     return <h2 className={styles.error}>Event not found.</h2>;
   }
   const handleShare = () => {
-    const eventLink = `https://advyka.in/${id}`;
+    const eventLink = `https://advyka.in/events/${id}`;
     navigator.clipboard.writeText(eventLink);
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 2000);
