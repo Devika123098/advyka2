@@ -41,7 +41,7 @@ const Events = () => {
   return (
     <div className={styles.container}>
       <div className={styles.heroSection}>
-        <Navbar scrollToFooter={scrollToFooter} />
+        <Navbar scrollToFooter={scrollToFooter}/>
         <div className={styles.content}>
           <h1 className={styles.heading}>Advyka Workshops & Events</h1>
           <h2>2025</h2>

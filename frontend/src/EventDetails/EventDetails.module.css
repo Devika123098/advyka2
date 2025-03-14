@@ -54,15 +54,19 @@
   .register {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff7b00;
-    color: #fff;
+    background: none;
+    border: 2px solid #2203ac;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
     border-radius: 5px;
-    text-decoration: none;
     margin-top: 20px;
   }
   
   .register:hover {
-    background-color: #dd6b00;
+    background: #2203ac;
   }
   
   .footer{

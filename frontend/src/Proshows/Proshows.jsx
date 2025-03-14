@@ -17,7 +17,7 @@ const Proshows = () => {
       <Navbar scrollToFooter={scrollToFooter} />
         <div className={styles.content}>
           <h1 className={styles.heading}>Advyka Proshows</h1>
-          <h2 className={styles.comingSoon}>Coming Soon</h2>
+          <h2 className={styles.comingSoon}>Booking Opens Soon</h2>
           {/* <h2>2025</h2> */}
         </div>
         <div className={styles.blurBottom}></div>
