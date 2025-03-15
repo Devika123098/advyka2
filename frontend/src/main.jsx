@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import Home from './Home/Home';
 
 import About from './About/About';
-
+import Shop from './Shop/Shop';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -52,6 +52,14 @@ const router = createBrowserRouter([
     element: (
       <Loading >
         <EventDetails />
+      </Loading>
+    ),
+  },
+  {
+    path: "/shop",
+    element: (
+      <Loading>
+        <Shop />
       </Loading>
     ),
   },
