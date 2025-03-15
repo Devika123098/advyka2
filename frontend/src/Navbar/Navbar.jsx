@@ -19,7 +19,7 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
       </div>
 
       <ul className={styles.navLinks}>
-        {isHomePage && (
+
           <>
             <li>
               <Link to="/merchandise">Merchandise</Link>
@@ -34,27 +34,9 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
               <a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>Contact</a>
             </li>
           </>
-        )}
-        {isProshowsPage && (
-          <>
-            <li>
-              <Link to="/events">Events</Link>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>Contact</a>
-            </li>
-          </>
-        )}
-        {isEventsPage && (
-          <>
-            <li>
-              <Link to="/proshows">Proshows</Link>
-            </li>
-            <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>Contact</a>
-            </li>
-          </>
-        )}
+ 
+
+
       </ul>
 
       <div className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
@@ -62,26 +44,14 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
       </div>
 
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}>
-        {isHomePage && (
+ 
           <>
             <Link to="/merchandise" onClick={() => setMenuOpen(false)}>Merchandise</Link>
             <Link to="/proshows" onClick={() => setMenuOpen(false)}>Proshows</Link>
             <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
             <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
           </>
-        )}
-        {isProshowsPage && (
-          <>
-            <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
-            <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
-          </>
-        )}
-        {isEventsPage && (
-          <>
-            <Link to="/proshows" onClick={() => setMenuOpen(false)}>Proshows</Link>
-            <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
-          </>
-        )}
+
       </div>
     </nav>
   );
