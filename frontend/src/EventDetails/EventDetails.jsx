@@ -91,10 +91,12 @@ const EventDetails = () => {
             <p>No coordinators available.</p>
           )}
           <div className={styles.buttonContainer}>
-          <a href={event.googleFormLink} target="_blank" rel="noopener noreferrer" className={styles.register}>
-          <FiEdit size={20} />
-            Register
-          </a>
+          {event.googleFormLink && (
+              <a href={event.googleFormLink} target="_blank" rel="noopener noreferrer" className={styles.register}>
+              <FiEdit size={20} />
+              Register
+              </a>
+          )}
           <button className={styles.share} onClick={handleShare}>
               <FiShare2 size={20} /> Share
             </button>
