@@ -1,5 +1,4 @@
 import ProductCard from '../components/ProductCard';
-
 const Shop = () => {
   return (
     <>

@@ -22,7 +22,7 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
         {isHomePage && (
           <>
             <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); scrollToAbout(); }}>About</a>
+              <Link to="/merchandise">Merchandise</Link>
             </li>
             <li>
               <Link to="/proshows">Proshows</Link>
@@ -32,9 +32,6 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
             </li>
             <li>
               <a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>Contact</a>
-            </li>
-            <li>
-              <Link to="/shop">Shop</Link>
             </li>
           </>
         )}
@@ -67,11 +64,10 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
       <div className={`${styles.mobileMenu} ${menuOpen ? styles.showMenu : ""}`}>
         {isHomePage && (
           <>
-            <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToAbout(); }}>About</a>
+            <Link to="/merchandise" onClick={() => setMenuOpen(false)}>Merchandise</Link>
             <Link to="/proshows" onClick={() => setMenuOpen(false)}>Proshows</Link>
             <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
             <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
-            <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
           </>
         )}
         {isProshowsPage && (
