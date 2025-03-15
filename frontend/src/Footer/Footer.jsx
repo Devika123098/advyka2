@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <p className={styles.footerText}>©2026 · Advyka CEP</p>
+        <p className={styles.footerText}>©2025 · Advyka CEP</p>
         <p className={styles.footerText}>Terms & Conditions · Privacy</p>
       </div>
     </footer>
