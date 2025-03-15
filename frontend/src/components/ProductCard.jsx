@@ -2,10 +2,11 @@ import React from 'react';
 import tshirt from '../assets/advyka-tshirt.png';
 import styles from './ProductCard.module.css';
 // import styles from '../Shop/Shop.module.css';
-
+import Navbar from '../Navbar/Navbar';
 const ProductCard = () => {
     return (
         <div className={styles.wrapper}>
+            <Navbar />
             <h2 className={styles.title}>SHOP NOW!!!</h2>
             <div className={styles.card}>
                 <div className={styles.image}>

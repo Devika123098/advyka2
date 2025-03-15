@@ -10,12 +10,13 @@
 .wrapper {
     width: 100%;
     background: linear-gradient(to bottom right, #0A0A0A, #1F2A44);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family:Shuttle,"El Messiri", sans-serif;
+    padding-bottom: 5rem;
 }
 
 .title{
@@ -36,6 +37,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5rem;
 }
 
 .card::before {
