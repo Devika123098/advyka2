@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+@font-face {
+  font-family: Shuttle;
+  src: url("../assets/SHUTTLE-X.ttf");
+}
+
+
+.wrapper {
+    width: 100%;
+    background: linear-gradient(to bottom right, #0A0A0A, #1F2A44);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:Shuttle,"El Messiri", sans-serif;
+}
+
+.title{
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.card {
+    height: 420px;
+    width: 600px; /* Increased from 320px to fit 600px image */
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    left: 0;
+    top: -50%;
+    background-color: #4B5563;
+    transform: skewY(345deg);
+    transition: 2s ease-in;
+}
+
+.card:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.card .image {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .image img {
+    width: 400x; 
+    transition: 2s ease-in;
+    filter: drop-shadow(0 2px 3px rgba(255, 255, 0, 0.8));
+}
+
+.card:hover .image img {
+    width: 80%; 
+    margin-bottom: 8rem;
+}
+
+.about-product {
+    position: absolute;
+    color: #fff;
+    bottom: -80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 1s ease-in;
+}
+
+.card:hover .about-product {
+    bottom: 20px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #4B5563;
+    border-color: #4B5563;
+    width: 160px;
+    padding: 0.5rem 0.25rem;
+    margin-top: 20px;
+    border-radius: 10px;
+    transition: 2s ease-in;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #111827;
+    border-color: #111827;
+}
+.productPrice{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+    .card{
+        width: 90%;
+    }
+    .about-product{
+        bottom: -85px;
+    }
+}

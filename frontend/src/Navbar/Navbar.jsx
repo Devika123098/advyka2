@@ -33,6 +33,9 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
             <li>
               <a href="#" onClick={(e) => { e.preventDefault(); scrollToFooter(); }}>Contact</a>
             </li>
+            <li>
+              <Link to="/shop">Shop</Link>
+            </li>
           </>
         )}
         {isProshowsPage && (
@@ -68,6 +71,7 @@ const Navbar = ({ scrollToAbout, scrollToFooter }) => {
             <Link to="/proshows" onClick={() => setMenuOpen(false)}>Proshows</Link>
             <Link to="/events" onClick={() => setMenuOpen(false)}>Events</Link>
             <a href="#" onClick={(e) => { e.preventDefault(); setMenuOpen(false); scrollToFooter(); }}>Contact</a>
+            <Link to="/shop" onClick={() => setMenuOpen(false)}>Shop</Link>
           </>
         )}
         {isProshowsPage && (
