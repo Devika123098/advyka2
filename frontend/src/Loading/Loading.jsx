@@ -14,11 +14,11 @@ const Loading = ({ children }) => {
 
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5500);
+    }, 2500);
 
     const textTimer = setTimeout(() => {
       setShowText(true);
-    }, 1000);
+    }, 500);
 
     return () => {
       clearTimeout(timer);
