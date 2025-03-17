@@ -3,6 +3,7 @@ import tshirt from '../assets/advyka-tshirt.png';
 import styles from './ProductCard.module.css';
 // import styles from '../Shop/Shop.module.css';
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 const ProductCard = () => {
     return (
         <div className={styles.wrapper}>
@@ -19,6 +20,7 @@ const ProductCard = () => {
                         className={styles.btn}>Buy Now</a>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };
