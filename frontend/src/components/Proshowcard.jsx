@@ -11,16 +11,17 @@ const ProshowCard = ({ day, date, description, image }) => {
       </div>
       <div className={styles.detailsContainer}>
         <h2 className={styles.day}>{day}</h2>
-        <p className={styles.description}>{description}</p>
-        <hr className={styles.separator} />
         <div className={styles.dateSection}>
           <span className={styles.dateIcon}><SiGooglecalendar /></span>
           <span className={styles.date}>{date}</span>
         </div>
+        <p className={styles.description}>{description}</p>
         <a href="https://makemypass.com/event/advyka-proshow" target="_blank" rel="noopener noreferrer">
           <button className={styles.bookButton}>
               Get Tickets <IoTicketSharp />
             </button>
+            <hr className={styles.separator} />
+
         </a>
       </div>
     </div>
