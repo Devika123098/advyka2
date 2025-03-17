@@ -11,6 +11,7 @@ import Carousel from "../Carousel/Carousel";
 import Pastevents from "../PastEvents/Pastevents.jsx";
 import Footer from "../Footer/Footer.jsx";
 import poster from "../assets/poster.webp";
+import Partners from "../Partners/Partners.jsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -172,6 +173,9 @@ const Home = () => {
           </div> */}
           <div className={styles.pastgallery}>
             <Pastevents />
+          </div>
+          <div className={styles.partners}>
+            <Partners/>
           </div>
           <div ref={footerRef} className={styles.footer}>
             <Footer />
