@@ -24,13 +24,13 @@ const Proshows = () => {
 
     
       <div className={styles.cardSection}>
-      <ProshowCard
+      {/* <ProshowCard
         day="Day 1 Pass"
         date="22/03/2025 Saturday"
         description="
 Get ready for an electrifying start to Advyka'25 with the Day 1 Pass, an unforgettable fusion of high-energy music and breathtaking fashion. Brace yourself as Vedan Live sets the stage on fire with their powerful riffs, soul-stirring vocals, and electrifying energy, delivering a performance that will leave you spellbound. As the night unfolds, immerse yourself in the world of style and creativity with the Fashion Show, where elegance meets innovation in a dazzling spectacle of talent and glamour. From heart-thumping beats to stunning runway moments, Day 1 promises an unparalleled experience of rhythm, artistry, and pure excitement. Don’t just witness the magic—be a part of it! 🎸👗🔥"
         image= {day1pass}
-        />
+        /> */}
          {/* <ProshowCard
         day="Day 2"
         date="23/03/2025 Sunday"
