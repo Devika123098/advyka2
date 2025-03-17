@@ -17,26 +17,26 @@ const Proshows = () => {
       <Navbar scrollToFooter={scrollToFooter} />
         <div className={styles.content}>
           <h1 className={styles.heading}>Advyka Proshows</h1>
-          <h2 className={styles.comingSoon}>Booking Opens Soon</h2>
-          {/* <h2>2025</h2> */}
+          <h2>2025</h2>
         </div>
         <div className={styles.blurBottom}></div>
       </div>
 
     
       <div className={styles.cardSection}>
-      {/* <ProshowCard
-        day="Day 2"
-        date="22/02/2025 (Saturday)"
-        description="Get ready for a night of ultimate musical brilliance at this season's most spectacular fest! Experience an electrifying atmosphere filled with breathtaking performances, pulsating beats, and unforgettable moments. With stunning stage setups, mesmerizing lights, and top artists bringing their best, this is a night you don’t want to miss. Get ready to dance, sing, and celebrate as we take the excitement to a whole new level. The countdown has begun—are you ready for an experience like never before?"
+      <ProshowCard
+        day="Day 1 Pass"
+        date="22/03/2025 Saturday"
+        description="
+Get ready for an electrifying start to Advyka'25 with the Day 1 Pass, an unforgettable fusion of high-energy music and breathtaking fashion. Brace yourself as Vedan Live sets the stage on fire with their powerful riffs, soul-stirring vocals, and electrifying energy, delivering a performance that will leave you spellbound. As the night unfolds, immerse yourself in the world of style and creativity with the Fashion Show, where elegance meets innovation in a dazzling spectacle of talent and glamour. From heart-thumping beats to stunning runway moments, Day 1 promises an unparalleled experience of rhythm, artistry, and pure excitement. Don’t just witness the magic—be a part of it! 🎸👗🔥"
         image= {proshow1}
         />
          <ProshowCard
         day="Day 2"
-        date="22/02/2025 (Saturday)"
-        description="Get ready for a night of ultimate musical brilliance at this season's most spectacular fest! Experience an electrifying atmosphere filled with breathtaking performances, pulsating beats, and unforgettable moments. With stunning stage setups, mesmerizing lights, and top artists bringing their best, this is a night you don’t want to miss. Get ready to dance, sing, and celebrate as we take the excitement to a whole new level. The countdown has begun—are you ready for an experience like never before?"
+        date="23/03/2025 Sunday"
+        description="Get ready for a sensational night of music and electrifying beats with the Day 2 Pass at Advyka'25! Lose yourself in the mesmerizing voice of Antara Mitra, as she takes you on a musical journey with her soulful melodies and chart-topping hits, creating an experience that will leave you enchanted. As the night intensifies, DJ Sana takes over, turning up the energy with an electrifying set that will have you dancing non-stop. From the magic of live vocals to the pulsating rhythms of a power-packed DJ performance, Day 2 promises an unforgettable night of music, energy, and euphoria. Don’t just hear the music—feel it! 🎤🎧🔥"
         image= {proshow1}
-        /> */}
+        />
        <div ref={footerRef} className={styles.footer}>
             <Footer/> 
           </div>  
