@@ -5,13 +5,13 @@ import { IoTicketSharp } from "react-icons/io5";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./Carousel.module.css";
-import proshow1 from "../assets/proshow1.webp";
-import proshow2 from "../assets/proshow2.webp";
-import proshow3 from "../assets/proshow3.webp";
+import proshow1 from "../assets/vedanday1.webp";
+import proshow2 from "../assets/antaramitra.webp";
+import proshow3 from "../assets/sanah.webp";
 
 const proshows = [
-  { id: 1, image: proshow1, date: "March 21, 2025", link: "/proshows" },
-  { id: 2, image: proshow2, date: "March 22, 2025", link: "/proshows" },
+  { id: 1, image: proshow1, date: "March 22, 2025", link: "/proshows" },
+  { id: 2, image: proshow2, date: "March 23, 2025", link: "/proshows" },
   { id: 3, image: proshow3, date: "March 23, 2025", link: "/proshows" }
 ];
 

@@ -167,10 +167,10 @@ const Home = () => {
             <About />
           </div>
           <div className={styles.spacer}></div>
-          {/* <div className={styles.carousel}>
+          <div className={styles.carousel}>
             <h2>Proshows</h2>
             <Carousel />
-          </div> */}
+          </div>
           <div className={styles.pastgallery}>
             <Pastevents />
           </div>

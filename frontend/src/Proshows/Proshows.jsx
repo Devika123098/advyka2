@@ -25,7 +25,7 @@ const Proshows = () => {
 
     
       <div className={styles.cardSection}>
-      {/* <ProshowCard
+      <ProshowCard
         day="Day 1 Pass"
         date="22/03/2025 Saturday"
         description="
@@ -37,7 +37,7 @@ Get ready for an electrifying start to Advyka'25 with the Day 1 Pass, an unforge
         date="23/03/2025 Sunday"
         description="Get ready for a sensational night of music and electrifying beats with the Day 2 Pass at Advyka'25! Lose yourself in the mesmerizing voice of Antara Mitra, as she takes you on a musical journey with her soulful melodies and chart-topping hits, creating an experience that will leave you enchanted. As the night intensifies, DJ Sana takes over, turning up the energy with an electrifying set that will have you dancing non-stop. From the magic of live vocals to the pulsating rhythms of a power-packed DJ performance, Day 2 promises an unforgettable night of music, energy, and euphoria. Don’t just hear the music—feel it! 🎤🎧🔥"
         image= {day2pass}
-        /> */}
+        />
        <div ref={footerRef} className={styles.footer}>
             <Footer/> 
           </div>  
