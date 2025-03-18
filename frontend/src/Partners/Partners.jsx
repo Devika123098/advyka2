@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Partners.module.css";
 import makemypasslogo from "../assets/makemypasslogo.webp"; 
-import concoctlogo from "../assets/concoct.webp";
+import concoctlogo from "../assets/concoctwhite.webp";
 import fab5logo from '../assets/fab5.webp';
 const Partners = () => {
   return (
