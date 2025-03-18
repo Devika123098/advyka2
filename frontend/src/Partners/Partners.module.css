@@ -1,13 +1,38 @@
 .partnersContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 200px; 
+    gap: 100px;
 }
 
 .partnerLogo {
+    width: 180px;
+    margin-top: px;
+}
+.concoctLogo {
+    width: 240px;
+    margin-bottom: 40px;
+}   
+.fab5Logo{
     width: 190px;
     margin-top: 10px;
+}
+.artistPartner,.ticketingPartner,.festivePartner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .partnersContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .fab5Logo{
+        margin-bottom: 40rem;
+    }
+
 }

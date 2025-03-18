@@ -221,7 +221,9 @@ video {
     .countdownLabel {
         font-size: 12px;
     }
-   
+   .partners{
+    margin-top: 25rem;
+   }
 }
 
 /* Light effect */
