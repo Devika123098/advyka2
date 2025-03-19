@@ -18,6 +18,7 @@ import EventDetails from './EventDetails/EventDetails';
 import Loading from './Loading/Loading';
 import Feedback from './Feedback/Feedback';
 import GiveFeedback from './Feedback/GiveFeedback';
+import FeedbackDetails from './Feedback/FeedbackDetails';
 
 const router = createBrowserRouter([
   {
@@ -68,20 +69,27 @@ const router = createBrowserRouter([
   {
     path: "/feedback",
     element: (
-      // <Loading>
+      <Loading>
         <Feedback />
-      //</Loading>
+      </Loading>
     ),
   },
   {
     path: "/givefeedback",
     element: (
-      // <Loading>
+      <Loading>
         <GiveFeedback />
-      //</Loading>
+      </Loading>
     ),
   },
-
+  {
+    path: "/feedback/:id", 
+    element: (
+      <Loading>
+      <FeedbackDetails />
+      </Loading>
+    ),
+  },
 ]);
 
 createRoot(document.getElementById("root")).render(

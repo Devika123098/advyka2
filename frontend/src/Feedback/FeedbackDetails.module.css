@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap');
+
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+
+  }
+  
+  .detailsContent {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .detailsCard {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .detailsName {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .detailsStars {
+    font-size: 1.2rem;
+    color: orange;
+  }
+  
+  .detailsReview {
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+  
+  .detailsWebsiteFeedback {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  .backButton {
+    background: #0056b3;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .backButton:hover {
+    background: #034081;
+  }
+  

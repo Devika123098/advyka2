@@ -1,0 +1,41 @@
+.card {
+    background: #1a1a1a;
+    border: 1px solid #0056b3;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stars {
+    font-size: 1.4rem;
+    color: gold;
+    white-space: nowrap;
+}
+
+.review {
+    font-size: 1rem;
+    color: #ddd;
+    margin-top: 0.5rem;
+}
+
+.expandButton {
+    background: #0056b3;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    float: right;
+}

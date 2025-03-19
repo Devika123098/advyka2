@@ -24,23 +24,28 @@ const Feedback = () => {
   }, []);
 
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.feedbackPage}>
       <Navbar />
-        <h1 className={styles.title}>Advyka Feedback</h1>
-        <button className={styles.addButton} onClick={() => navigate("/givefeedback")}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Advyka'25 Feedback</h1>
+        <button
+          className={styles.addButton}
+          onClick={() => navigate("/givefeedback")}
+        >
           Add Feedback
         </button>
         <div className={styles.grid}>
           {feedbacks.length > 0 ? (
-            feedbacks.map((feedback) => <FeedbackCard key={feedback.id} data={feedback} />)
+            feedbacks.map((feedback) => (
+              <FeedbackCard key={feedback.id} data={feedback} />
+            ))
           ) : (
             <p className={styles.noFeedback}>No feedback available.</p>
           )}
         </div>
-        <Footer />
       </div>
-    </>
+      <Footer />
+    </div>
   );
 };
 

@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&display=swap');
+
+:root {
+    --theme-blue-light: #00aaff;
+    --theme-blue-dark: #0056b3;
+}
+
+.feedbackContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    padding: 20px;
+    font-family: "Exo 2", sans-serif;
+}
+
+.heading {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+
+}
+
+.feedbackForm {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.inputField, .textarea {
+    background: #222;
+    color: white;
+    border: 2px solid #444;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    transition: border-color 0.4s ease-in-out;
+}
+
+.inputField:focus, .textarea:focus {
+    border-color: var(--theme-blue-light);
+    outline: none;
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+}
+
+.starRatingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.starLabel {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.starRating {
+    display: flex;
+    gap: 10px;
+}
+
+.activeStar {
+    color: gold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.inactiveStar {
+    color: #444;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.submitButton {
+    background: linear-gradient(45deg, var(--theme-blue-light), var(--theme-blue-dark));
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submitButton:hover {
+    background: linear-gradient(45deg, var(--theme-blue-dark), var(--theme-blue-light));
+}
+
+@media (max-width: 600px) {
+    .heading {
+        font-size: 2rem;
+    }
+
+    .feedbackForm {
+        padding: 20px;
+    }
+}
+.errorMessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .errorInput {
+    border: 2px solid red !important;
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  

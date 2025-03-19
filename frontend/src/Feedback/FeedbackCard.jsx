@@ -1,21 +1,31 @@
-import React, { useState } from "react";
-import styles from "./Feedback.module.css";
-import { FaStar, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React from "react";
+import { FiArrowUpRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import styles from "./FeedbackCard.module.css";
 
 const FeedbackCard = ({ data }) => {
-  const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className={styles.card}>
-      <h3 className={styles.name}>{data.name}</h3>
-      <div className={styles.rating}>
-        <FaStar className={styles.starIcon} />
-        <span>{data.rating}/5</span>
+      <div className={styles.header}>
+        <h3 className={styles.name}>{data.name}</h3>
+        <span className={styles.stars}>
+          {"★".repeat(data.stars)}{"☆".repeat(5 - data.stars)}
+        </span>
       </div>
-      <p className={styles.review}>{data.eventFeedback || "No review provided."}</p>
-      {expanded && <p className={styles.review}>{data.websiteFeedback || "No website feedback."}</p>}
-      <button className={styles.expandButton} onClick={() => setExpanded(!expanded)}>
-        {expanded ? <FaChevronUp /> : <FaChevronDown />}
+      <p className={styles.review}>
+        {data.eventFeedback
+          ? data.eventFeedback.length > 80
+            ? data.eventFeedback.substring(0, 80) + "..."
+            : data.eventFeedback
+          : "No feedback provided"}
+      </p>
+      <button
+        className={styles.expandButton}
+        onClick={() => navigate(`/feedback/${data.id}`)}
+      >
+        <FiArrowUpRight size={20} />
       </button>
     </div>
   );
