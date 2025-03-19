@@ -16,6 +16,8 @@ import Proshows from './Proshows/Proshows';
 import Events from './Events/Events';
 import EventDetails from './EventDetails/EventDetails';
 import Loading from './Loading/Loading';
+import Feedback from './Feedback/Feedback';
+import GiveFeedback from './Feedback/GiveFeedback';
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,22 @@ const router = createBrowserRouter([
       <Loading>
         <Shop />
       </Loading>
+    ),
+  },
+  {
+    path: "/feedback",
+    element: (
+      // <Loading>
+        <Feedback />
+      //</Loading>
+    ),
+  },
+  {
+    path: "/givefeedback",
+    element: (
+      // <Loading>
+        <GiveFeedback />
+      //</Loading>
     ),
   },
 
