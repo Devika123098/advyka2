@@ -110,14 +110,18 @@
   .bookButton:hover {
     background-color: #ff5e00;
   }
+ .partners{
+  margin-top: 5rem;
+ }
   @media (max-width: 768px) {
     .heading{
       font-size: 60px;
     }
     .partners{
-      margin-top: 35rem;
+      margin-top: 45rem;
      }
   }
   .footer{
+    margin-top: 10rem;
     width: 100%;
   }

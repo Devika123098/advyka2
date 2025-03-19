@@ -23,6 +23,9 @@
     font-family:Shuttle,"El Messiri", sans-serif;
     font-optical-sizing: auto;
 }
+.partners{
+    margin-bottom: 7rem;
+}
 .videoContainer {
     position: fixed;
     top: 0;
@@ -136,6 +139,9 @@ video {
   .pastHeading{
     margin-top: 50px;
   }
+  .footer{
+    margin-top: 5rem;
+  }
 
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -158,9 +164,7 @@ video {
     margin-left: 5px;
     animation: blink 0.8s infinite;
   }
-  /* .pastgallery{
-    height: 120vh;
-  } */
+ 
   @keyframes blink {
     50% { opacity: 0; }
   }
@@ -222,11 +226,10 @@ video {
         font-size: 12px;
     }
    .partners{
-    margin-top: 25rem;
+    margin-top: 35rem;
    }
 }
 
-/* Light effect */
 
   .light {
     height: 200px;
@@ -237,7 +240,6 @@ video {
     left: 18%;
     border-radius: 50%;
     transform: rotate(125deg);
-    /* background-color: rgba(7, 149, 192, 0.575); */
     background-image: linear-gradient(90deg, rgba(7, 149, 192, 0.575),rgba(103, 162, 180, 0.575));
     filter: blur(50px);
     opacity: 0; 
@@ -264,7 +266,6 @@ video {
     }
 }
 
-/* Responsive light effect */
 
  
 
