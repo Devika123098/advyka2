@@ -42,7 +42,7 @@ Get ready for an electrifying start to Advyka'25 with the Day 1 Pass, an unforge
         />
         <ProshowCard
         day="Combo Pass"
-        date="23 & 23 March"
+        date="22 & 23 March"
         description="Get ready for two electrifying nights of music, energy, and unforgettable performances with the Advyka'25 Combo Pass. On Day 1, experience the high-energy performance of Vedan Live, followed by a spectacular fashion show filled with style and glamour. On Day 2, let Antara Mitra’s soulful melodies take you on a mesmerizing musical journey before DJ Sanaah turns up the energy with an electrifying set that will have you dancing all night. With live music, stunning visuals, and non-stop entertainment, the Combo Pass guarantees an experience you won’t forget. Grab yours now!"
         image= {combo}
         />
