@@ -15,7 +15,7 @@ const Partners = () => {
         <img src={makemypasslogo} alt="MakeMyPass Logo" className={styles.partnerLogo} />
       </div>
       <div className={styles.artistPartner}>
-        <h3 className={styles.headings}>Artist Managed By</h3>
+        <h3 className={styles.headings}>Production Partner</h3>
         <img src={fab5logo} alt="Fab5 Logo" className={styles.fab5Logo} />
       </div>
     </div>
