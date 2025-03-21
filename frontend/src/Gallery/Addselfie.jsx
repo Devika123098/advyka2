@@ -14,7 +14,7 @@ const AddSelfie = () => {
   const navigate = useNavigate();
 
   const handleImageUpload = async () => {
-    if (!image) return alert("Please select an image!");
+    if (!image) return alert("Please select an image!(below 4mb size)");
 
     setUploading(true);
     const formData = new FormData();

@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 .selfieCard {
     position: relative;
     width: 280px;
     height: 280px;
     overflow: hidden;
+    font-family: "Exo 2", sans-serif;
+
   }
   
-
+  .arrowButton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .arrowButton:hover {
+    transform: scale(1.1);
+  }
+  
   
   .selfieImage {
     width: 100%;

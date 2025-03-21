@@ -51,7 +51,7 @@ const GalleryDetail = () => {
   return selfie ? (
     <div className={styles.container}>
         <Navbar/>
-      <h2 className={styles.heading}>Your Selfie is Live!</h2>
+      <h2 className={styles.heading}>Captured forever at Advyka'25!</h2>
       <img src={selfie.image} alt="Uploaded Selfie" className={styles.selfieImage} />
       <p className={styles.caption}>{selfie.name} is at Advyka'25!</p>
 
