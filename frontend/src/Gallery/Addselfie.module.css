@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .form {
+    background: rgba(150, 149, 148, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: orange;
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+  }
+  
+  .input, .fileInput {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .uploadButton, .submitButton {
+    padding: 10px;
+    border: none;
+    background: orange;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .uploadButton:disabled, .submitButton:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+  
+  .uploadButton:hover, .submitButton:hover {
+    background: rgb(255, 140, 0);
+  }
+  

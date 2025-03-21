@@ -19,6 +19,9 @@ import Loading from './Loading/Loading';
 import Feedback from './Feedback/Feedback';
 import GiveFeedback from './Feedback/GiveFeedback';
 import FeedbackDetails from './Feedback/FeedbackDetails';
+import Gallery from './Gallery/Gallery';
+import Addselfie from './Gallery/Addselfie';
+import GalleryDetail from './Gallery/GalleryDetail';
 
 const router = createBrowserRouter([
   {
@@ -87,6 +90,30 @@ const router = createBrowserRouter([
     element: (
       <Loading>
       <FeedbackDetails />
+      </Loading>
+    ),
+  },
+  {
+    path: "/gallery", 
+    element: (
+      <Loading>
+      <Gallery />
+      </Loading>
+    ),
+  },
+  {
+    path: "/addselfie", 
+    element: (
+      <Loading>
+      <Addselfie />
+      </Loading>
+    ),
+  },
+  {
+    path: "/gallery/:id", 
+    element: (
+      <Loading>
+      <GalleryDetail />
       </Loading>
     ),
   },

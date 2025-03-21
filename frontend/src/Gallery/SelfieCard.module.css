@@ -1,0 +1,38 @@
+.selfieCard {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+  }
+  
+
+  
+  .selfieImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .selfieName {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .selfieDate {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+  

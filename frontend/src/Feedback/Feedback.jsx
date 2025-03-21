@@ -28,6 +28,7 @@ const Feedback = () => {
       <Navbar />
       <div className={styles.container}>
         <h1 className={styles.title}>Advyka'25 Feedback</h1>
+        <p>Good Bye Untill we see again on ADVYKA'26</p>
         <button
           className={styles.addButton}
           onClick={() => navigate("/givefeedback")}
