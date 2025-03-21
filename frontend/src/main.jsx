@@ -20,8 +20,8 @@ import Feedback from './Feedback/Feedback';
 import GiveFeedback from './Feedback/GiveFeedback';
 import FeedbackDetails from './Feedback/FeedbackDetails';
 import Gallery from './Gallery/Gallery';
-import Addselfie from './Gallery/Addselfie';
 import GalleryDetail from './Gallery/GalleryDetail';
+import AddSelfie from './Gallery/Addselfie';
 
 const router = createBrowserRouter([
   {
@@ -105,7 +105,7 @@ const router = createBrowserRouter([
     path: "/addselfie", 
     element: (
       <Loading>
-      <Addselfie />
+      <AddSelfie />
       </Loading>
     ),
   },
