@@ -3,7 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
-import styles from "./AddSelfie.module.css";
+import styles from "./Addselfie.module.css";
 
 const AddSelfie = () => {
   const [name, setName] = useState("");
