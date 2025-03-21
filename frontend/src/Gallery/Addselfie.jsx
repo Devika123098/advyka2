@@ -10,13 +10,21 @@ const AddSelfie = () => {
   const [image, setImage] = useState(null);
   const [imageUrl, setImageUrl] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleImageUpload = async () => {
-    if (!image) return alert("Please select an image!(below 4mb size)");
+    if (!image) return alert("Please select an image!");
+
+    if (image.size > 10 * 1024 * 1024) { 
+      alert("Image size exceeds 10MB! Please upload a smaller image.");
+      return;
+    }
 
     setUploading(true);
+    setUploadProgress(0);
+
     const formData = new FormData();
     formData.append("file", image);
     formData.append("upload_preset", "selfies");
@@ -25,13 +33,21 @@ const AddSelfie = () => {
       const res = await axios.post(
         "https://api.cloudinary.com/v1_1/dby0vmlef/image/upload",
         formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
+        {
+          headers: { "Content-Type": "multipart/form-data" },
+          onUploadProgress: (progressEvent) => {
+            const percentCompleted = Math.round(
+              (progressEvent.loaded * 100) / progressEvent.total
+            );
+            setUploadProgress(percentCompleted);
+          },
+        }
       );
       setImageUrl(res.data.secure_url);
       alert("Image uploaded successfully!");
     } catch (error) {
       console.error("Error uploading image:", error);
-      alert("Image upload failed!");
+      alert("Image upload failed! Try a smaller image.");
     } finally {
       setUploading(false);
     }
@@ -82,13 +98,24 @@ const AddSelfie = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
 
+        {uploading && (
+          <div className={styles.progressBarContainer}>
+            <div
+              className={styles.progressBar}
+              style={{ width: `${uploadProgress}%` }}
+            >
+              {uploadProgress}%
+            </div>
+          </div>
+        )}
+
         <button
           type="button"
           className={styles.uploadButton}
           onClick={handleImageUpload}
           disabled={uploading}
         >
-          {uploading ? "Uploading..." : "Upload Image"}
+          {uploading ? `Uploading... ${uploadProgress}%` : "Upload Image"}
         </button>
 
         <button

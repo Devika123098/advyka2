@@ -10,6 +10,22 @@
     font-family: "Exo 2", sans-serif;
 
 }
+.progressBarContainer {
+    width: 100%;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: #ff9800;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+  }
+  
   
   .form {
     background: rgba(150, 149, 148, 0.1);
