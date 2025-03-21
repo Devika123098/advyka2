@@ -146,19 +146,19 @@ const Home = () => {
 
           <div className={styles.countdownBox}>
             <div className={styles.countdownItem}>
-              <div className={styles.countdownNumber}>{timeLeft.days}</div>
+              <div className={styles.countdownNumber}>L</div>
               <div className={styles.countdownLabel}>Days</div>
             </div>
             <div className={styles.countdownItem}>
-              <div className={styles.countdownNumber}>{timeLeft.hours}</div>
+              <div className={styles.countdownNumber}>I</div>
               <div className={styles.countdownLabel}>Hours</div>
             </div>
             <div className={styles.countdownItem}>
-              <div className={styles.countdownNumber}>{timeLeft.minutes}</div>
+              <div className={styles.countdownNumber}>V</div>
               <div className={styles.countdownLabel}>Minutes</div>
             </div>
             <div className={styles.countdownItem}>
-              <div className={styles.countdownNumber}>{timeLeft.seconds}</div>
+              <div className={styles.countdownNumber}>E</div>
               <div className={styles.countdownLabel}>Seconds</div>
             </div>
           </div>
